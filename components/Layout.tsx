@@ -33,6 +33,7 @@ const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
             className="text-gray-900 dark:text-white"
             href="https://github.com/dunkbing"
             target='_blank'
+            rel="noreferrer"
           >
             Bùi Đặng Bình
           </a>
