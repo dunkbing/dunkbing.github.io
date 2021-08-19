@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MetaProps } from '../types/layout';
 import Head from './Head';
 import Navigation from './Navigation';
@@ -7,27 +7,37 @@ import ThemeSwitch from './ThemeSwitch';
 type LayoutProps = {
   children: React.ReactNode;
   customMeta?: MetaProps;
+  favIcon?: string;
 };
 
 export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
 
-const Layout = ({ children, customMeta }: LayoutProps): JSX.Element => {
+const Layout = ({ children, customMeta, favIcon }: LayoutProps): JSX.Element => {
+  useEffect(() => {
+    if (process.browser) {
+      const fav = document.getElementById('favicon') as HTMLLinkElement;
+      if (fav) {
+        fav.href = favIcon;
+      }
+    }
+  }, []);
+
   return (
     <>
       <Head customMeta={customMeta} />
-      <header>
-        <div className="max-w-5xl px-8 mx-auto">
-          <div className="flex items-center justify-between py-6">
+      <header className="sticky top-0 z-50">
+        <div className="max-w-4xl px-8 mx-auto header">
+          <div className="flex items-center justify-between py-4">
             <Navigation />
             <ThemeSwitch />
           </div>
         </div>
       </header>
       <main>
-        <div className="max-w-5xl px-8 py-4 mx-auto">{children}</div>
+        <div className="max-w-4xl px-8 py-4 mx-auto">{children}</div>
       </main>
       <footer className="py-8">
-        <div className="max-w-5xl px-8 mx-auto">
+        <div className="max-w-4xl px-8 mx-auto">
           Built by{' '}
           <a
             className="text-gray-900 dark:text-white"
