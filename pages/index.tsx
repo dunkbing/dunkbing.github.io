@@ -18,14 +18,22 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout favIcon={helloIcon}>
       <div className="flex flex-row">
-        <Image
-          className="image rounded-full"
-          width="80px"
-          height="60px"
-          src={profilePic}
-          alt="profile_pic"
-        />
-        <div style={{ marginLeft: '10px' }}>
+        <div style={{
+          width: "40%",
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }} className="flex-auto">
+          <Image
+            className="image rounded-full"
+            width="100%"
+            height="100%"
+            src={profilePic}
+            alt="profile_pic"
+          />
+        </div>
+        <div className="mx-3">
           <Welcome message="Hello" />
           <p>
             I am Bui Dang Binh, a software engineering student and graphics
