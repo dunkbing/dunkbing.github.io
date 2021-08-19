@@ -1,0 +1,37 @@
+.timeline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.timeline-list {
+  position: relative;
+  padding-left: 45px;
+  list-style: none;
+}
+
+.timeline-event p {
+  position: relative;
+  top: -5px;
+  margin: 0;
+  text-align: left;
+}
+
+.timeline-event .year {
+  font-size: small;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  color: #6e6e6e;
+}
+
+.timeline-event {
+  position: relative;
+}
+
+.timeline-event.is-not-done {
+  padding-bottom: 30px;
+}
+
+.timeline-event.is-done {
+  padding-bottom: 15px;
+}
