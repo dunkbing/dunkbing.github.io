@@ -6,7 +6,7 @@ interface TimeLineProps {
   company: string;
   time: string;
   lastItem?: boolean;
-};
+}
 
 const TimeLineItem: React.FC<TimeLineProps> = (props) => {
   return (
