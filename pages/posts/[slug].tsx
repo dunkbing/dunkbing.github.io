@@ -16,6 +16,7 @@ import Layout, { WEBSITE_HOST_URL } from '../../components/Layout';
 import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
+import { noteIcon } from '../../lib/icon';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -41,7 +42,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
     type: 'article',
   };
   return (
-    <Layout customMeta={customMeta}>
+    <Layout customMeta={customMeta} favIcon={noteIcon}>
       <article>
         <h1 className="mb-3 text-gray-900 dark:text-white">
           {frontMatter.title}
@@ -49,7 +50,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
           {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
         </p>
-        <div className="prose dark:prose-dark">
+        <div className="note-content prose dark:prose-dark">
           <MDXRemote {...source} components={components} />
         </div>
       </article>
