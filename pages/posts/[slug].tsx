@@ -12,11 +12,12 @@ import path from 'path';
 import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-import Layout, { WEBSITE_HOST_URL } from '../../components/Layout';
+import Layout from '../../components/Layout';
 import { MetaProps } from '../../types/layout';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 import { noteIcon } from '../../lib/icon';
+import { WEBSITE_HOST_URL } from '../../components/Head';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
