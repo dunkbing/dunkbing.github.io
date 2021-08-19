@@ -2,7 +2,7 @@
   "name": "dunkbing-blog",
   "author": "dunkbing",
   "repository": {
-    "url": "https://github.com/dunkbing/blog.git",
+    "url": "https://github.com/dunkbing/dunkbing.github.io.git",
     "type": "git"
   },
   "license": "MIT",
@@ -11,12 +11,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test",
-    "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "test-all": "yarn lint && yarn type-check && yarn test"
   },
   "husky": {
     "hooks": {
@@ -32,40 +32,40 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
-    "date-fns": "^2.19.0",
-    "gray-matter": "^4.0.2",
-    "mdx-prism": "^0.3.3",
-    "next": "^11.0.1",
-    "next-mdx-remote": "^3.0.2",
+    "date-fns": "^2.23.0",
+    "gray-matter": "^4.0.3",
+    "mdx-prism": "^0.3.4",
+    "next": "^11.1.0",
+    "next-mdx-remote": "^3.0.4",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "rehype-autolink-headings": "^5.0.1",
-    "rehype-slug": "^4.0.1",
-    "remark-code-titles": "^0.1.1"
+    "rehype-autolink-headings": "^6.0.0",
+    "rehype-slug": "^5.0.0",
+    "remark-code-titles": "^0.1.2"
   },
   "devDependencies": {
-    "@testing-library/react": "^11.2.5",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.25",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.2",
     "@types/react": "^17.0.18",
     "@typescript-eslint/eslint-plugin": "^4.14.2",
     "@typescript-eslint/parser": "^4.14.2",
     "autoprefixer": "^10.2.6",
-    "babel-jest": "^26.6.3",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.19.0",
     "eslint-config-next": "^11.0.1",
-    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.19.0",
-    "husky": "^4.2.3",
+    "husky": "^7.0.1",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.6.3",
+    "jest": "^27.0.6",
     "jest-watch-typeahead": "^0.6.1",
-    "lint-staged": "^10.0.10",
-    "postcss": "^8.3.5",
-    "prettier": "^2.0.2",
-    "rehype": "^11.0.0",
-    "tailwindcss": "^2.2.4",
-    "typescript": "^4.3.4"
+    "lint-staged": "^11.1.2",
+    "postcss": "^8.3.6",
+    "prettier": "^2.3.2",
+    "rehype": "^12.0.0",
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.3.5"
   }
 }

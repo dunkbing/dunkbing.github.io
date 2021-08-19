@@ -10,8 +10,6 @@ type LayoutProps = {
   favIcon?: string;
 };
 
-export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
-
 const Layout = ({ children, customMeta, favIcon }: LayoutProps): JSX.Element => {
   useEffect(() => {
     if (process.browser) {

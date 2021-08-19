@@ -3,9 +3,12 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { MetaProps } from '../types/layout';
 
-export const WEBSITE_HOST_URL = 'https://nextjs-typescript-mdx-blog.vercel.app';
+export let WEBSITE_HOST_URL = 'https://dunkbing.github.io';
 
 const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
+  if (process.browser) {
+    WEBSITE_HOST_URL = location.hostname
+  }
   const router = useRouter();
   const meta: MetaProps = {
     title: 'Bùi Đặng Bình',
