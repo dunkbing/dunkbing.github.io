@@ -1,10 +1,14 @@
-import { format, parseISO } from 'date-fns';
-import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import React from 'react';
+import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import Layout from '../components/Layout';
+import PostCard from '../components/PostCard';
+import TimeLine from '../components/TimeLine';
+import Welcome from '../components/Welcome';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
+import profilePic from '../public/images/profile.jpg';
+import { helloIcon } from '../lib/icon';
 
 type IndexProps = {
   posts: PostType[];
@@ -12,29 +16,48 @@ type IndexProps = {
 
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
-    <Layout>
-      <h1>Bùi Đặng Bình</h1>
-
-      {posts.map((post) => (
-        <article key={post.slug} className="mt-12">
-          <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-            {format(parseISO(post.date), 'MMMM dd, yyyy')}
-          </p>
-          <h1 className="mb-2 text-xl">
-            <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-              <a className="text-gray-900 dark:text-white dark:hover:text-blue-400">
-                {post.title}
-              </a>
-            </Link>
-          </h1>
-          <p className="mb-3">{post.description}</p>
+    <Layout favIcon={helloIcon}>
+      <div className="flex flex-row">
+        <Image
+          className="image rounded-full"
+          width="80px"
+          height="60px"
+          src={profilePic}
+          alt="profile_pic"
+        />
+        <div style={{ marginLeft: '10px' }}>
+          <Welcome message="Hello" />
           <p>
-            <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
-              <a>Read More</a>
-            </Link>
+            I am Bui Dang Binh, a software engineering student and graphics
+            programming enthusiast.
           </p>
-        </article>
-      ))}
+        </div>
+      </div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          verticalAlign: 'center',
+        }}
+      >
+        <TimeLine />
+        <p>See my full Resume</p>
+        <p>Find me on Twitter</p>
+      </div>
+      <Welcome message="Latest Notes" />
+      <div className="my-0.5">
+        {posts.map((post) => (
+          <PostCard
+            key={post.slug}
+            slug={post.slug}
+            title={post.title}
+            date={post.date}
+            description={post.description}
+            image={post.image}
+          />
+        ))}
+      </div>
     </Layout>
   );
 };
