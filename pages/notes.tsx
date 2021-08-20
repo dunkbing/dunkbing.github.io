@@ -15,7 +15,8 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
   return (
     <Layout
       customMeta={{
-        title: 'Notes',
+        title: 'All Notes',
+        description: 'All of my notes',
       }}
       favIcon={noteIcon}
     >
@@ -27,7 +28,7 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
             key={post.slug}
             slug={post.slug}
             title={post.title}
-            date={post.date}
+            modifiedTime={post.modifiedTime}
             description={post.description}
             image={post.image}
           />
@@ -38,7 +39,7 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts(['date', 'description', 'slug', 'title']);
+  const posts = await getAllPosts(['modifiedTime', 'description', 'slug', 'title']);
 
   return {
     props: { posts },

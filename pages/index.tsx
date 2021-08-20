@@ -60,7 +60,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             key={post.slug}
             slug={post.slug}
             title={post.title}
-            date={post.date}
+            modifiedTime={post.modifiedTime}
             description={post.description}
             image={post.image}
           />
@@ -71,7 +71,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts(['date', 'description', 'slug', 'title']);
+  const posts = await getAllPosts(['modifiedTime', 'description', 'slug', 'title']);
 
   return {
     props: { posts },

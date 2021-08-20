@@ -11,7 +11,7 @@ const PostCard: React.FC<PostType> = (post) => {
     >
       <div style={{ padding: '20px 20px 5px 20px'}}>
         <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-          {format(parseISO(post.date), 'MMMM dd, yyyy')}
+          {format(parseISO(post.modifiedTime), 'MMMM dd, yyyy')}
         </p>
         <h1 className="mb-2 text-xl">
           <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
