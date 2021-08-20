@@ -12,7 +12,7 @@ A Next.js starter for your next blog or personal site. Built with:
 
 This Starter is **heavily** inspired by [Lee Robinson](https://github.com/leerob/leerob.io) and [Anson Lichtfuss](https://github.com/ansonlichtfuss/website).
 
-👀 [View the Live Demo](https://nextjs-typescript-mdx-blog.vercel.app/)
+👀 [View the Live Demo](https://dunkbing.github.io)
 
 ## Getting Started
 
