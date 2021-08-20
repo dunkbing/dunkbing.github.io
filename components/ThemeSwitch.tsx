@@ -1,5 +1,6 @@
-import { useTheme } from 'next-themes';
 import React from 'react';
+import { useTheme } from 'next-themes';
+import * as ga from '../lib/ga';
 
 /**
  * Based off of gatsby-theme-novela
@@ -9,6 +10,12 @@ import React from 'react';
 const ThemeSwitch = (): JSX.Element => {
   const [mounted, setMounted] = React.useState(false);
   const { theme, setTheme } = useTheme();
+
+  const onThemeSwitch = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    ga.event({ action: 'change theme', params: newTheme });
+    setTheme(newTheme);
+  };
 
   // After mounting, we have access to the theme
   React.useEffect(() => setMounted(true), []);
@@ -27,7 +34,7 @@ const ThemeSwitch = (): JSX.Element => {
       className="theme-button"
       type="button"
       aria-label="Toggle Dark Mode"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={onThemeSwitch}
     >
       <div className="moon-or-sun" />
       <div className="moon-mask" />

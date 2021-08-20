@@ -1,18 +1,15 @@
-import { ThemeProvider } from 'next-themes';
-import type { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from 'next-themes';
+import { useRouter } from 'next/router';
+import * as ga from '../lib/ga';
 import '../styles/globals.css';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   const router = useRouter();
 
-  const handleRouteChange = (url) => {
-    if (process.browser) {
-      (window as any).gtag('config', 'UA-201839371-1', {
-        page_path: url,
-      });
-    }
+  const handleRouteChange = (url: string) => {
+    ga.pageView(url);
   };
 
   useEffect(() => {
