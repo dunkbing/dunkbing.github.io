@@ -13,7 +13,7 @@ import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import Layout from '../../components/Layout';
-import { MetaProps } from '../../types/layout';
+import { MetaProps } from '../../types/meta-props';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 import { noteIcon } from '../../lib/icon';
@@ -36,12 +36,14 @@ type PostPageProps = {
 
 const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
   const customMeta: MetaProps = {
-    title: `${frontMatter.title} - Bùi Đặng Bình`,
+    title: `${frontMatter.title}`,
     description: frontMatter.description,
     image: `${WEBSITE_HOST_URL}${frontMatter.image}`,
-    date: frontMatter.date,
+    publishedTime: frontMatter.publishedTime,
+    modifiedTime: frontMatter.modifiedTime,
     type: 'article',
   };
+
   return (
     <Layout customMeta={customMeta} favIcon={noteIcon}>
       <article>
@@ -49,7 +51,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
           {frontMatter.title}
         </h1>
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          {format(parseISO(frontMatter.date), 'MMMM dd, yyyy')}
+          Last updated: {format(parseISO(frontMatter.publishedTime), 'MMMM dd, yyyy')}
         </p>
         <div className="prose dark:prose-dark">
           <MDXRemote {...source} components={components} />

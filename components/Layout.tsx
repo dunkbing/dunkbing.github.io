@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { MetaProps } from '../types/layout';
+import { MetaProps } from '../types/meta-props';
 import Head from './Head';
 import Navigation from './Navigation';
 import ThemeSwitch from './ThemeSwitch';
