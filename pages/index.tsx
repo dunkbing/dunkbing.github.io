@@ -8,7 +8,12 @@ import Welcome from '../components/Welcome';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
 import profilePic from '../public/images/profile.jpg';
+import cyberPurr from '../public/images/projects/cyber-purr/1.png';
+import bonkingBall from '../public/images/projects/jumping-ball/1.png';
 import { helloIcon } from '../lib/icon';
+import { FiTwitter, FiInstagram } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
+import Projects from '../components/Projects';
 
 type IndexProps = {
   posts: PostType[];
@@ -53,13 +58,59 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         }}
       >
         <TimeLine />
-        <p>
+        <p style={{ marginBottom: 0 }}>
           See my full{' '}
           <a href="/resume.docx" download>
             Resume
           </a>
         </p>
-        <p>Find me on Twitter</p>
+        <p style={{ display: 'flex', flexDirection: 'row' }}>
+          Find me on{' '}
+          <a
+            href="https://twitter.com/Bing_Dunk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiTwitter style={{ marginLeft: 10, marginTop: 4 }} />
+          </a>
+          <a
+            href="https://www.instagram.com/dunkbingg/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiInstagram style={{ marginLeft: 10, marginTop: 4 }} />
+          </a>
+          <a
+            href="https://github.com/dunkbing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub style={{ marginLeft: 10, marginTop: 4 }} />
+          </a>
+        </p>
+      </div>
+      <Welcome message="My Games" />
+      <div>
+        <Projects
+          projects={[
+            {
+              image: cyberPurr,
+              description: 'me learning unity',
+              images: [cyberPurr],
+              techs: ['unity'],
+              name: 'Cyber Purr',
+              url: 'https://github.com/dunkbing/cyber-purr',
+            },
+            {
+              image: bonkingBall,
+              description: 'my first android game',
+              images: [bonkingBall],
+              techs: ['unity'],
+              name: 'Bonking Ball',
+              url: 'https://play.google.com/store/apps/details?id=com.dunkbing.JumpingBall',
+            },
+          ]}
+        />
       </div>
       <Welcome message="Latest Notes" />
       <div className="my-0.5">
