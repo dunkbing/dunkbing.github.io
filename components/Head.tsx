@@ -7,13 +7,12 @@ export let WEBSITE_HOST_URL = 'https://dunkbing.github.io';
 
 const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
   if (process.browser) {
-    WEBSITE_HOST_URL = location.hostname
+    WEBSITE_HOST_URL = location.hostname;
   }
   const router = useRouter();
   const meta: MetaProps = {
     title: 'Bùi Đặng Bình',
-    description:
-      'Student. Game Developer. Anime and Manga lover.',
+    description: 'Student. Game Developer. Anime and Manga lover.',
     image: `${WEBSITE_HOST_URL}/images/site-preview.png`,
     type: 'article',
     ...customMeta,
@@ -21,10 +20,17 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
 
   return (
     <NextHead>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width"
+        key="viewport"
+      />
       <meta charSet="utf-8" />
       <meta name="description" content={meta.description} />
-      <meta name="google-site-verification" content="EvBTnaMX5a54coVLUMXi9_87myajTYR_KF5j8T_Ag-E" />
+      <meta
+        name="google-site-verification"
+        content="EvBTnaMX5a54coVLUMXi9_87myajTYR_KF5j8T_Ag-E"
+      />
       <title>{meta.title}</title>
       {/*Tells Google not to provide a translation for this document*/}
       <meta name="google" content="notranslate" />
@@ -36,7 +42,10 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:site_name" content="Bùi Đặng Bình - Game Developer" />
-      <meta property='article:author' content='https://www.facebook.com/dunkbingg' />
+      <meta
+        property="article:author"
+        content="https://www.facebook.com/dunkbingg"
+      />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@Bing_Dunk" />
       <meta name="twitter:creator" content="@Bing_Dunk" />

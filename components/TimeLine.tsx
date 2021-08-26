@@ -8,7 +8,7 @@ interface TimeLineProps {
   lastItem?: boolean;
 }
 
-const TimeLineItem: React.FC<TimeLineProps> = (props) => {
+const TimeLineItem: React.FC<TimeLineProps> = props => {
   return (
     <div className={`${styles['timeline-event']} ${styles['is-done']}`}>
       {props.lastItem ? null : (
@@ -41,7 +41,7 @@ const TimeLineItem: React.FC<TimeLineProps> = (props) => {
           borderRadius: '50%',
           fontSize: '10px',
         }}
-      ></div>
+      />
     </div>
   );
 };

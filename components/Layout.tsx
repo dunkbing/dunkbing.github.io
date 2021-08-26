@@ -10,7 +10,11 @@ type LayoutProps = {
   favIcon?: string;
 };
 
-const Layout = ({ children, customMeta, favIcon }: LayoutProps): JSX.Element => {
+const Layout = ({
+  children,
+  customMeta,
+  favIcon,
+}: LayoutProps): JSX.Element => {
   useEffect(() => {
     if (process.browser) {
       const fav = document.getElementById('favicon') as HTMLLinkElement;
@@ -40,7 +44,7 @@ const Layout = ({ children, customMeta, favIcon }: LayoutProps): JSX.Element => 
           <a
             className="text-gray-900 dark:text-white"
             href="https://github.com/dunkbing"
-            target='_blank'
+            target="_blank"
             rel="noreferrer"
           >
             Bùi Đặng Bình
