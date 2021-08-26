@@ -53,7 +53,12 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         }}
       >
         <TimeLine />
-        <p>See my full Resume</p>
+        <p>
+          See my full{' '}
+          <a href="/resume.docx" download>
+            Resume
+          </a>
+        </p>
         <p>Find me on Twitter</p>
       </div>
       <Welcome message="Latest Notes" />
