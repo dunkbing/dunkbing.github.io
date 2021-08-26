@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
+// import { Carousel } from 'react-responsive-carousel';
 
 type ProjectProps = {
   description: string;
@@ -11,23 +11,23 @@ type ProjectProps = {
   url?: string;
 };
 
-const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
-  return (
-    <Carousel>
-      {images.map(image => (
-        <div key={image}>
-          <img src={image} />
-          <p className="legend">Legend 1</p>
-        </div>
-      ))}
-    </Carousel>
-  );
-};
+// const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
+//   return (
+//     <Carousel>
+//       {images.map(image => (
+//         <div key={image}>
+//           <img src={image} />
+//           <p className="legend">Legend 1</p>
+//         </div>
+//       ))}
+//     </Carousel>
+//   );
+// };
 
 const ProjectItem: React.FC<ProjectProps> = ({
   description,
   image,
-  images,
+  // images,
   name,
   techs,
   url,
