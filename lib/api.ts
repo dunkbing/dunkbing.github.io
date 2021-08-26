@@ -11,7 +11,10 @@ type PostItems = {
   [key: string]: string;
 };
 
-export async function getPostBySlug(slug: string, fields: string[] = []): Promise<PostItems> {
+export async function getPostBySlug(
+  slug: string,
+  fields: string[] = []
+): Promise<PostItems> {
   const realSlug = slug.replace(/\.mdx$/, '');
   const fullPath = join(POSTS_PATH, `${realSlug}.mdx`);
   const fileContents = await fs.readFile(fullPath, 'utf8');
@@ -20,7 +23,7 @@ export async function getPostBySlug(slug: string, fields: string[] = []): Promis
   const items: PostItems = {};
 
   // Ensure only the minimal needed data is exposed
-  fields.forEach((field) => {
+  fields.forEach(field => {
     if (field === 'slug') {
       items[field] = realSlug;
     }
@@ -37,7 +40,11 @@ export async function getPostBySlug(slug: string, fields: string[] = []): Promis
 
 export async function getAllPosts(fields: string[] = []): Promise<PostItems[]> {
   const slugs = await getPostSlugs();
-  const postsBySlugs = await Promise.all(slugs.map(slug => getPostBySlug(slug, fields)));
+  const postsBySlugs = await Promise.all(
+    slugs.map(slug => getPostBySlug(slug, fields))
+  );
   // sort posts by date in descending order
-  return postsBySlugs.sort((post1, post2) => (post1.modifiedTime > post2.modifiedTime ? -1 : 1));
+  return postsBySlugs.sort((post1, post2) =>
+    post1.modifiedTime > post2.modifiedTime ? -1 : 1
+  );
 }

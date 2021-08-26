@@ -23,7 +23,7 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
       <Welcome message="All Notes" />
       <p>This site has {posts?.length} notes.</p>
       <div className="my-0.5">
-        {posts.map((post) => (
+        {posts.map(post => (
           <PostCard
             key={post.slug}
             slug={post.slug}
@@ -39,7 +39,12 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts(['modifiedTime', 'description', 'slug', 'title']);
+  const posts = await getAllPosts([
+    'modifiedTime',
+    'description',
+    'slug',
+    'title',
+  ]);
 
   return {
     props: { posts },

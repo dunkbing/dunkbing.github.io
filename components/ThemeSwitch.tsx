@@ -114,7 +114,7 @@ const ThemeSwitch = (): JSX.Element => {
           background-color: ${color};
         }
         .header {
-          background-color: ${isDark ? "#000" : "#fff"};
+          background-color: ${isDark ? '#000' : '#fff'};
           border-bottom: 1px solid ${color}
         }
       `}</style>

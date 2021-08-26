@@ -18,13 +18,16 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout favIcon={helloIcon}>
       <div className="flex flex-row">
-        <div style={{
-          width: "40%",
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }} className="flex-auto">
+        <div
+          style={{
+            width: '40%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          className="flex-auto"
+        >
           <Image
             className="image rounded-full"
             width="100%"
@@ -55,7 +58,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       </div>
       <Welcome message="Latest Notes" />
       <div className="my-0.5">
-        {posts.map((post) => (
+        {posts.map(post => (
           <PostCard
             key={post.slug}
             slug={post.slug}
@@ -71,7 +74,12 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts(['modifiedTime', 'description', 'slug', 'title']);
+  const posts = await getAllPosts([
+    'modifiedTime',
+    'description',
+    'slug',
+    'title',
+  ]);
 
   return {
     props: { posts },
