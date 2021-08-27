@@ -1,0 +1,62 @@
+---
+title: Learn DSA with me - Linked List
+description: A single linked list is the best and simplest example of a dynamic data structure that uses pointers for implementation.
+publishedTime: '2021-08-27'
+modifiedTime: '2021-08-27'
+image: '/images/linkedlist/linkedlist.png'
+---
+
+A singly linked list is a dynamically distributed collection of Nodes, arranged in such a way that each Node contains a value (Data) and a pointer (Next). The pointer will point to the next element of that linked list. If the pointer points to NULL, it is the last element of the linked list.
+
+![image info](/images/linkedlist/linkedlist.png)
+
+|Content|Array|Linked List|
+|---|---|---|
+|Size|- Fixed size<br/> - Need to specify size during declaration|- Size changes during element addition/removal.<br/>- Maximum size depends on memory|
+|Memory Allocation|Static: Memory allocated during compilation.|Dynamic: Memory allocated during run time.|
+|Ordering and sorting|Stored in a contiguous array of memory cells.|Stored in random memory cells.|
+|Accessing|Accessing random element directly using array index: O(1).|Accessing a random element requires traversing from the beginning/end to the element: O(n).|
+|Searching|Linear search or binary search.|Only linear search is possible.|
+
+Cách loại danh sách liên kết:
+- Linked List.
+- Doubly Linked List.
+- Circular Linked List.
+
+With other languages such as Java, C#, Python, there is no pointer concept, so you can use the available library, but to understand how to install it, you can see your C++ sample code.
+
+Implement a singly linked list. Example for C++:
+Node declaration:
+```jsx:linkedlist.cpp
+struct Node {
+	  int data;
+	  Node* next;
+};
+```
+Create a new Node:
+```jsx:linkedlist.cpp
+Node* createNode(int x) {
+    Node* temp = new Node;
+    temp->next = NULL;
+    temp->data = x;
+    return temp;
+}
+```
+Add an element to the end of the listLinker knowing the pointer is pointing to the last element:
+```jsx:linkedlist.cpp
+Node* addElement(Node*p, int x) {
+	Node* temp = createNode(x); // Create a new node with x is the value.
+	p->next = temp; // Add that node to the end of the list.
+	return temp; // temp now is the lst node.
+}
+```
+Traversing through the elements in the linked list.
+```jsx:linkedlist.cpp
+Node* p = l;
+while (p != NULL) {
+    p = p->next;
+}
+```
+
+To be continued...
+Go back [Home](/).
