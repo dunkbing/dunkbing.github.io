@@ -10,6 +10,7 @@ import { PostType } from '../types/post';
 import profilePic from '../public/images/profile.jpg';
 import cyberPurr from '../public/images/projects/cyber-purr/1.png';
 import bonkingBall from '../public/images/projects/jumping-ball/1.png';
+import floppyShip from '../public/images/projects/floppy-ship/1.webp';
 import { helloIcon } from '../lib/icon';
 import { FiTwitter, FiInstagram, FiGithub, FiFacebook } from 'react-icons/fi';
 import Projects from '../components/Projects';
@@ -115,10 +116,18 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               name: 'Bonking Ball',
               url: 'https://play.google.com/store/apps/details?id=com.dunkbing.JumpingBall',
             },
+{
+              image: floppyShip,
+              description: 'my second android game',
+              images: [],
+              techs: ['unity'],
+              name: 'Bonking Ball',
+              url: 'https://play.google.com/store/apps/details?id=com.dunkbing.FloppyShip',
+            },
           ]}
         />
       </div>
-      <Welcome message="Latest Notes" />
+      <Welcome message="My Notes" />
       <div className="my-0.5">
         {posts.map(post => (
           <PostCard
