@@ -47,7 +47,7 @@ const Layout = ({
             target="_blank"
             rel="noreferrer"
           >
-            Bùi Đặng Bình
+            Bui Dang Binh
           </a>
         </div>
       </footer>
