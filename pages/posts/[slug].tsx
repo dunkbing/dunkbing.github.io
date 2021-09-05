@@ -46,14 +46,21 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
 
   return (
     <Layout customMeta={customMeta} favIcon={noteIcon}>
-      <article>
+      <article
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
         <h1 className="mb-3 text-gray-900 dark:text-white">
           {frontMatter.title}
         </h1>
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          Last updated: {format(parseISO(frontMatter.publishedTime), 'MMMM dd, yyyy')}
+          Last updated:{' '}
+          {format(parseISO(frontMatter.publishedTime), 'MMMM dd, yyyy')}
         </p>
-        <div className="prose dark:prose-dark">
+        <div className="prose dark:prose-dark" style={{ maxWidth: '80%' }}>
           <MDXRemote {...source} components={components} />
         </div>
       </article>
@@ -87,9 +94,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = postFilePaths
     // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ''))
+    .map(path => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
-    .map((slug) => ({ params: { slug } }));
+    .map(slug => ({ params: { slug } }));
 
   return {
     paths,

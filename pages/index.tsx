@@ -11,8 +11,7 @@ import profilePic from '../public/images/profile.jpg';
 import cyberPurr from '../public/images/projects/cyber-purr/1.png';
 import bonkingBall from '../public/images/projects/jumping-ball/1.png';
 import { helloIcon } from '../lib/icon';
-import { FiTwitter, FiInstagram } from 'react-icons/fi';
-import { FaGithub } from 'react-icons/fa';
+import { FiTwitter, FiInstagram, FiGithub, FiFacebook } from 'react-icons/fi';
 import Projects from '../components/Projects';
 
 type IndexProps = {
@@ -85,7 +84,14 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
             target="_blank"
             rel="noreferrer"
           >
-            <FaGithub style={{ marginLeft: 10, marginTop: 4 }} />
+            <FiGithub style={{ marginLeft: 10, marginTop: 4 }} />
+          </a>
+          <a
+            href="https://www.facebook.com/dunkbingg/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FiFacebook style={{ marginLeft: 10, marginTop: 4 }} />
           </a>
         </p>
       </div>
