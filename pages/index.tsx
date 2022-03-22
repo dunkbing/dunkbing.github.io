@@ -8,12 +8,11 @@ import Welcome from '../components/Welcome';
 import { getAllPosts } from '../lib/api';
 import { PostType } from '../types/post';
 import profilePic from '../public/images/profile.jpg';
-import cyberPurr from '../public/images/projects/cyber-purr/1.png';
-import bonkingBall from '../public/images/projects/jumping-ball/1.png';
-import floppyShip from '../public/images/projects/floppy-ship/1.webp';
 import { helloIcon } from '../lib/icon';
 import { FiTwitter, FiInstagram, FiGithub, FiFacebook } from 'react-icons/fi';
 import Projects from '../components/Projects';
+import Gap from '../components/Gap';
+import projects from '../lib/projects';
 
 type IndexProps = {
   posts: PostType[];
@@ -44,7 +43,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
         <div className="mx-3">
           <Welcome message="Hello" />
           <p>
-            I am Bui Dang Binh, a software engineering student and graphics
+            I am Bui Dang Binh, a software engineering student and games
             programming enthusiast.
           </p>
         </div>
@@ -96,37 +95,12 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           </a>
         </p>
       </div>
-      <Welcome message="My Games" />
+      <Gap.M />
+      <Welcome message="My Projects" />
       <div>
-        <Projects
-          projects={[
-            {
-              image: cyberPurr,
-              description: 'me learning unity',
-              images: [cyberPurr],
-              techs: ['unity'],
-              name: 'Cyber Purr',
-              url: 'https://github.com/dunkbing/cyber-purr',
-            },
-            {
-              image: bonkingBall,
-              description: 'my first android game',
-              images: [bonkingBall],
-              techs: ['unity'],
-              name: 'Bonking Ball',
-              url: 'https://play.google.com/store/apps/details?id=com.dunkbing.JumpingBall',
-            },
-            {
-              image: floppyShip,
-              description: 'my second android game',
-              images: [],
-              techs: ['unity'],
-              name: 'Bonking Ball',
-              url: 'https://play.google.com/store/apps/details?id=com.dunkbing.FloppyShip',
-            },
-          ]}
-        />
+        <Projects projects={projects} />
       </div>
+      <Gap.M />
       <Welcome message="My Notes" />
       <div className="my-0.5">
         {posts.map(post => (
