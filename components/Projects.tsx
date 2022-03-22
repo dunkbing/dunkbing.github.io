@@ -11,19 +11,6 @@ type ProjectProps = {
   url?: string;
 };
 
-// const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
-//   return (
-//     <Carousel>
-//       {images.map(image => (
-//         <div key={image}>
-//           <img src={image} />
-//           <p className="legend">Legend 1</p>
-//         </div>
-//       ))}
-//     </Carousel>
-//   );
-// };
-
 const ProjectItem: React.FC<ProjectProps> = ({
   description,
   image,
@@ -37,16 +24,19 @@ const ProjectItem: React.FC<ProjectProps> = ({
       style={{
         display: 'flex',
         flexDirection: 'row',
+        marginTop: '10px',
       }}
     >
-      <Image
-        src={image}
-        alt="cyber purr"
-        className="image rounded-full"
-        width="100%"
-        height="100%"
-      />
-      <div>
+      <div style={{ margin: 'auto', marginLeft: 0, marginRight: '10px' }}>
+        <Image
+          src={image}
+          alt="cyber purr"
+          className="image rounded-full h-48 w-48"
+          width="50%"
+          height="50%"
+        />
+      </div>
+      <div style={{ marginLeft: '15px' }}>
         <a href={url} target="_blank" rel="noreferrer">
           {name}
         </a>
@@ -55,7 +45,6 @@ const ProjectItem: React.FC<ProjectProps> = ({
           <p key={tech}>{tech}</p>
         ))}
       </div>
-      {/* <ImageCarousel images={images} /> */}
     </div>
   );
 };
