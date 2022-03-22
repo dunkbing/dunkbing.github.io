@@ -116,7 +116,7 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
               name: 'Bonking Ball',
               url: 'https://play.google.com/store/apps/details?id=com.dunkbing.JumpingBall',
             },
-{
+            {
               image: floppyShip,
               description: 'my second android game',
               images: [],
