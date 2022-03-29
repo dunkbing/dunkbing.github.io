@@ -17,6 +17,18 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ],
+      "@lib/*": [
+        "lib/*"
+      ],
+    },
     "incremental": true
   },
   "exclude": [
