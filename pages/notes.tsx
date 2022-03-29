@@ -4,7 +4,7 @@ import Layout from '../components/Layout';
 import PostCard from '../components/PostCard';
 import Welcome from '../components/Welcome';
 import { getAllPosts } from '../lib/api';
-import { noteIcon } from '../lib/icon';
+import { noteIcon } from '../lib/icons';
 import { PostType } from '../types/post';
 
 type NotesProps = {

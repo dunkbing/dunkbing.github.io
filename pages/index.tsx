@@ -1,18 +1,21 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
-import Layout from '../components/Layout';
-import PostCard from '../components/PostCard';
-import TimeLine from '../components/TimeLine';
-import Welcome from '../components/Welcome';
-import { getAllPosts } from '../lib/api';
-import { PostType } from '../types/post';
-import profilePic from '../public/images/profile.jpg';
-import { helloIcon } from '../lib/icon';
-import { FiTwitter, FiInstagram, FiGithub, FiFacebook } from 'react-icons/fi';
-import Projects from '../components/Projects';
-import Gap from '../components/Gap';
-import projects from '../lib/projects';
+import { getAllPosts } from '@lib/api';
+import { helloIcon } from '@lib/icons';
+import {
+  Layout,
+  PostCard,
+  Gap,
+  Projects,
+  Contact,
+  Header,
+  Languages,
+  Frontend,
+  Backend,
+} from '@components/index';
+import { Title } from '@components/Welcome';
+import projects from '@lib/projects';
+import { PostType } from '@types/post';
 
 type IndexProps = {
   posts: PostType[];
@@ -21,87 +24,20 @@ type IndexProps = {
 export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout favIcon={helloIcon}>
-      <div className="flex flex-row">
-        <div
-          style={{
-            width: '40%',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-          className="flex-auto"
-        >
-          <Image
-            className="image rounded-full"
-            width="100%"
-            height="100%"
-            src={profilePic}
-            alt="profile_pic"
-          />
-        </div>
-        <div className="mx-3">
-          <Welcome message="Hello" />
-          <p>
-            I am Bui Dang Binh, a software engineering student and games
-            programming enthusiast.
-          </p>
-        </div>
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          verticalAlign: 'center',
-        }}
-      >
-        <TimeLine />
-        <p style={{ marginBottom: 0 }}>
-          See my full{' '}
-          <a href="/resume.docx" download>
-            Resume
-          </a>
-        </p>
-        <p style={{ display: 'flex', flexDirection: 'row' }}>
-          Find me on{' '}
-          <a
-            href="https://twitter.com/Bing_Dunk"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiTwitter style={{ marginLeft: 10, marginTop: 4 }} />
-          </a>
-          <a
-            href="https://www.instagram.com/dunkbingg/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiInstagram style={{ marginLeft: 10, marginTop: 4 }} />
-          </a>
-          <a
-            href="https://github.com/dunkbing"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiGithub style={{ marginLeft: 10, marginTop: 4 }} />
-          </a>
-          <a
-            href="https://www.facebook.com/dunkbingg/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FiFacebook style={{ marginLeft: 10, marginTop: 4 }} />
-          </a>
-        </p>
-      </div>
+      <Header />
+      <Contact />
       <Gap.M />
-      <Welcome message="My Projects" />
-      <div>
-        <Projects projects={projects} />
-      </div>
+      <Title message="Languages Known" />
+      <Languages />
+      <Title message="Frontend" />
+      <Frontend />
+      <Title message="Backend, Database" />
+      <Backend />
       <Gap.M />
-      <Welcome message="My Notes" />
+      <Title message="My Projects" />
+      <Projects projects={projects} />
+      <Gap.M />
+      <Title message="My Notes" />
       <div className="my-0.5">
         {posts.map(post => (
           <PostCard
