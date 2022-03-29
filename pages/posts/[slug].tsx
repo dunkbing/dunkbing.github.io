@@ -18,7 +18,7 @@ import Layout from '../../components/Layout';
 import { MetaProps } from '../../types/meta-props';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
-import { noteIcon } from '../../lib/icon';
+import { noteIcon } from '../../lib/icons';
 import { WEBSITE_HOST_URL } from '../../components/Head';
 
 // Custom components/renderers to pass to MDX.
