@@ -12,11 +12,13 @@ import path from 'path';
 import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
+import rehypeRaw from 'rehype-raw';
+import { nodeTypes } from '@mdx-js/mdx';
 import Layout from '../../components/Layout';
 import { MetaProps } from '../../types/meta-props';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
-import { noteIcon } from '../../lib/icon';
+import { noteIcon } from '../../lib/icons';
 import { WEBSITE_HOST_URL } from '../../components/Head';
 
 // Custom components/renderers to pass to MDX.
@@ -74,21 +76,34 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const { content, data } = matter(source);
 
-  const mdxSource = await serialize(content, {
-    // Optionally pass remark/rehype plugins
-    mdxOptions: {
-      remarkPlugins: [require('remark-code-titles')],
-      rehypePlugins: [mdxPrism, rehypeSlug, rehypeAutolinkHeadings],
-    },
-    scope: data,
-  });
-
-  return {
-    props: {
-      source: mdxSource,
-      frontMatter: data,
-    },
-  };
+  try {
+    const mdxSource = await serialize(content, {
+      // Optionally pass remark/rehype plugins
+      mdxOptions: {
+        remarkPlugins: [require('remark-code-titles')],
+        rehypePlugins: [
+          mdxPrism,
+          rehypeSlug,
+          [rehypeRaw, { passThrough: nodeTypes }],
+          rehypeAutolinkHeadings,
+        ],
+      },
+      scope: data,
+    });
+    return {
+      props: {
+        source: mdxSource,
+        frontMatter: data,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        source: null,
+        frontMatter: data,
+      },
+    };
+  }
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {

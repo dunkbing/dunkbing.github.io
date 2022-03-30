@@ -1,9 +1,9 @@
 import React from 'react';
 import { format, parseISO } from 'date-fns';
-import { PostType } from '../types/post';
+import { PostType } from '../../types/post';
 import Link from 'next/dist/client/link';
 
-const PostCard: React.FC<PostType> = post => {
+const Note: React.FC<PostType> = post => {
   return (
     <article className="bg-color-theme mt-5" style={{ borderRadius: '25px' }}>
       <div style={{ padding: '20px 20px 5px 20px' }}>
@@ -28,4 +28,4 @@ const PostCard: React.FC<PostType> = post => {
   );
 };
 
-export default PostCard;
+export default Note;
