@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Gap from './Gap';
 // import { Carousel } from 'react-responsive-carousel';
 
 type ProjectProps = {
@@ -10,19 +11,6 @@ type ProjectProps = {
   name: string;
   url?: string;
 };
-
-// const ImageCarousel: React.FC<{ images: string[] }> = ({ images }) => {
-//   return (
-//     <Carousel>
-//       {images.map(image => (
-//         <div key={image}>
-//           <img src={image} />
-//           <p className="legend">Legend 1</p>
-//         </div>
-//       ))}
-//     </Carousel>
-//   );
-// };
 
 const ProjectItem: React.FC<ProjectProps> = ({
   description,
@@ -37,44 +25,74 @@ const ProjectItem: React.FC<ProjectProps> = ({
       style={{
         display: 'flex',
         flexDirection: 'row',
+        marginBottom: '10px',
       }}
     >
-      <Image
-        src={image}
-        alt="cyber purr"
-        className="image rounded-full"
-        width="100%"
-        height="100%"
-      />
-      <div>
+      <div style={{ margin: 'auto', marginLeft: 0, marginRight: '10px' }}>
+        <Image
+          src={image}
+          alt="cyber purr"
+          className="image rounded-full h-48 w-48"
+          width="50%"
+          height="50%"
+        />
+      </div>
+      <div style={{ marginLeft: '15px' }}>
         <a href={url} target="_blank" rel="noreferrer">
           {name}
         </a>
         <h4>{description}</h4>
-        {techs.map(tech => (
-          <p key={tech}>{tech}</p>
-        ))}
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          {techs.map(tech => (
+            <span
+              style={{
+                boxSizing: 'border-box',
+                marginRight: '5px',
+                borderWidth: '1px',
+                borderStyle: 'solid',
+                borderColor: '#ccc',
+                paddingLeft: '3px',
+                paddingRight: '3px',
+                borderRadius: '4px',
+                fontSize: '0.8em',
+              }}
+              key={tech}
+            >
+              #{tech}
+            </span>
+          ))}
+        </div>
       </div>
-      {/* <ImageCarousel images={images} /> */}
     </div>
   );
 };
 
 const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
   return (
-    <div>
-      {projects.map(project => (
-        <ProjectItem
-          key={project.name}
-          description={project.description}
-          image={project.image}
-          images={project.images}
-          techs={project.techs}
-          url={project.url}
-          name={project.name}
-        />
-      ))}
-    </div>
+    <>
+      <Gap.XS />
+      <p>
+        Sometimes, I build personal projects, enhance my skill, and ... for fun!
+      </p>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+        }}
+      >
+        {projects.map(project => (
+          <ProjectItem
+            key={project.name}
+            description={project.description}
+            image={project.image}
+            images={project.images}
+            techs={project.techs}
+            url={project.url}
+            name={project.name}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
