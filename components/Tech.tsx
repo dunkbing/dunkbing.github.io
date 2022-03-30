@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   JsIcon,
   TsIcon,
@@ -12,7 +13,6 @@ import {
   NextJsIcon,
   UnityIcon,
 } from '@lib/icons';
-import React from 'react';
 
 const TechItem: React.FC<{ icon: any }> = ({ icon }) => {
   return <div style={{ width: 50, height: 50, margin: 10 }}>{icon}</div>;

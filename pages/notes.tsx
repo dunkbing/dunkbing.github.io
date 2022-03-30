@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
 import Layout from '../components/Layout';
-import PostCard from '../components/PostCard';
-import Welcome from '../components/Welcome';
+import Note from '../components/Notes/Note';
+import { Title } from '../components/Welcome';
 import { getAllPosts } from '../lib/api';
 import { noteIcon } from '../lib/icons';
 import { PostType } from '../types/post';
@@ -20,11 +20,11 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
       }}
       favIcon={noteIcon}
     >
-      <Welcome message="All Notes" />
+      <Title message="All Notes" />
       <p>This site has {posts?.length} notes.</p>
       <div className="my-0.5">
         {posts.map(post => (
-          <PostCard
+          <Note
             key={post.slug}
             slug={post.slug}
             title={post.title}
