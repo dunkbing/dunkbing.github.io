@@ -1,12 +1,18 @@
 language: node_js
 node_js:
-  - 14
+  - 16
 cache:
+  npm: false
   directories:
-  - node_modules # Cache the node_modules folder for quicker build times
+    - '~/.pnpm-store' # Cache the node_modules folder for quicker build times
+before_install:
+  - curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm@7
+  - pnpm config set store-dir ~/.pnpm-store
+install:
+  - pnpm install
 script:
-  - npm run build
-  - npm run export # Runs next export and generates the out directory
+  - pnpm build
+  - pnpm export # Runs next export and generates the out directory
   - touch out/.nojekyll # Creates a file telling Github not to build the project using Jekyll
 deploy:
   provider: pages # Informs Travis this is a deployment to GitHub Pages
