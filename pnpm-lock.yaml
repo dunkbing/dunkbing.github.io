@@ -33,6 +33,7 @@ specifiers:
   react-dom: ^17.0.2
   react-icons: ^4.4.0
   react-responsive-carousel: ^3.2.23
+  react-tooltip: ^4.2.21
   rehype: ^12.0.1
   rehype-autolink-headings: ^6.1.1
   rehype-raw: ^6.1.1
@@ -58,6 +59,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   react-icons: 4.4.0_react@17.0.2
   react-responsive-carousel: 3.2.23
+  react-tooltip: 4.2.21_sfoxds7t5ydpegc3knd667wn6m
   rehype-autolink-headings: 6.1.1
   rehype-raw: 6.1.1
   rehype-slug: 5.0.1
@@ -5116,6 +5118,19 @@ packages:
       react-easy-swipe: 0.0.21
     dev: false
 
+  /react-tooltip/4.2.21_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-zSLprMymBDowknr0KVDiJ05IjZn9mQhhg4PRsqln0OZtURAJ1snt1xi5daZfagsh6vfsziZrc9pErPTDY1ACig==}
+    engines: {npm: '>=6.13'}
+    peerDependencies:
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      uuid: 7.0.3
+    dev: false
+
   /react/17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
     engines: {node: '>=0.10.0'}
@@ -6103,6 +6118,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  /uuid/7.0.3:
+    resolution: {integrity: sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==}
+    hasBin: true
+    dev: false
 
   /uvu/0.5.6:
     resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}

@@ -4,7 +4,8 @@ import styles from '../../styles/timeline.module.css';
 interface TimeLineProps {
   experience: string;
   company: string;
-  time: string;
+  startTime: string;
+  endTime?: string;
   lastItem?: boolean;
 }
 
@@ -27,7 +28,9 @@ const TimeLineItem: React.FC<TimeLineProps> = props => {
       )}
       <p>{props.experience}</p>
       <p>{props.company}</p>
-      <p className={styles['year']}>{props.time}</p>
+      <p className={styles['year']}>
+        {props.startTime} {props.endTime && ` - ${props.endTime}`}
+      </p>
       <div
         className="color-theme"
         style={{
@@ -53,17 +56,19 @@ const TimeLine: React.FC = () => {
         <TimeLineItem
           experience="🎓 Bachelor's degree"
           company="Software Engineering"
-          time="2022"
+          startTime="2022"
         />
         <TimeLineItem
-          experience="☀️ C++ Fresher"
+          experience="☀️ Backend Developer"
+          company="Vietnam AI System"
+          startTime="2/2022"
+          endTime="current"
+        />
+        <TimeLineItem
+          experience="☀️ C++ Internship"
           company="Gameloft"
-          time="2021"
-        />
-        <TimeLineItem
-          experience="☀️ Nodejs Internship"
-          company="VietIS Corp"
-          time="2020"
+          startTime="3/2021"
+          endTime="10/2021"
           lastItem={true}
         />
       </div>
