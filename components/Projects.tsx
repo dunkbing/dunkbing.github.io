@@ -21,41 +21,25 @@ const ProjectItem: React.FC<ProjectProps> = ({
   url,
 }) => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        marginBottom: '10px',
-      }}
-    >
-      <div style={{ margin: 'auto', marginLeft: 0, marginRight: '10px' }}>
+    <div className="flex flex-row mb-2.5">
+      <div className="my-auto w-1/5 flex flex-row  justify-center">
         <Image
           src={image}
           alt="cyber purr"
-          className="image rounded-full h-48 w-48"
+          className="image rounded-full mx-auto"
           width="50%"
           height="50%"
         />
       </div>
-      <div style={{ marginLeft: '15px' }}>
+      <div className=" w-4/5">
         <a href={url} target="_blank" rel="noreferrer">
           {name}
         </a>
-        <h4>{description}</h4>
+        <h4 className="w-full font-mono mb-0.5">{description}</h4>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           {techs.map(tech => (
             <span
-              style={{
-                boxSizing: 'border-box',
-                marginRight: '5px',
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: '#ccc',
-                paddingLeft: '3px',
-                paddingRight: '3px',
-                borderRadius: '4px',
-                fontSize: '0.8em',
-              }}
+              className="mr-0.5 border border-solid border-white px-1 rounded-md text-xs"
               key={tech}
             >
               #{tech}
@@ -74,12 +58,7 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
       <p>
         Sometimes, I build personal projects, enhance my skill, and ... for fun!
       </p>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-        }}
-      >
+      <div className="grid grid-cols-2">
         {projects.map(project => (
           <ProjectItem
             key={project.name}

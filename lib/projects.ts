@@ -3,7 +3,7 @@ import { bonkingBall, cyberPurr, defaultImg, floppyShip } from './images';
 const projects = [
   {
     image: defaultImg,
-    description: 'me learning react',
+    description: 'me learning react/nextjs',
     images: [defaultImg],
     techs: ['react', 'nextjs'],
     name: 'Personal site',
@@ -11,11 +11,11 @@ const projects = [
   },
   {
     image: defaultImg,
-    description: 'WIP',
+    description: 'Simple webapp for watching video from sp@nkb@ng.com',
     images: [defaultImg],
     techs: ['react', 'nextjs', 'python'],
-    name: 'Manga reading app',
-    url: '#',
+    name: 'Video watching web app',
+    url: 'https://github.com/dunkbing/p0rn-video-app',
   },
   {
     image: cyberPurr,
@@ -43,10 +43,11 @@ const projects = [
   },
   {
     image: defaultImg,
-    description: 'ASCII Art generator',
+    description:
+      'Simple terminal chat application made with Go and Redis pub/sub',
     images: [],
-    techs: ['python'],
-    name: 'PyAscii',
+    techs: ['golang'],
+    name: 'Tchat',
     url: 'https://imgzascii.herokuapp.com/',
   },
 ];
