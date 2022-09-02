@@ -48,7 +48,7 @@ const projects = [
     images: [],
     techs: ['golang'],
     name: 'Tchat',
-    url: 'https://imgzascii.herokuapp.com/',
+    url: 'https://github.com/dunkbing/tchat',
   },
 ];
 
