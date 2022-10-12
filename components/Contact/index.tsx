@@ -1,5 +1,4 @@
 import React from 'react';
-import Resume from './Resume';
 import Social from './Social';
 import TimeLine from './TimeLine';
 
@@ -14,7 +13,6 @@ const Contact: React.FC = () => {
       }}
     >
       <TimeLine />
-      <Resume />
       <Social />
     </div>
   );
