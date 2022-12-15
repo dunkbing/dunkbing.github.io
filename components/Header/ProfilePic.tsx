@@ -1,24 +1,14 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { profilePic } from '@lib/images';
 
 const ProfilePic: React.FC = () => {
   return (
-    <div
-      style={{
-        width: '40%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-      className="flex-auto"
-    >
+    <div className="flex flex-col align-center justify-center w-2/5">
       <Image
-        className="image rounded-full"
-        width="100%"
-        height="100%"
+        className="image rounded-full w-1/2"
         src={profilePic}
+        objectFit="fill"
         alt="profile_pic"
       />
     </div>

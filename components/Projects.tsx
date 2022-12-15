@@ -1,7 +1,6 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import React from 'react';
 import Gap from './Gap';
-// import { Carousel } from 'react-responsive-carousel';
 
 type ProjectProps = {
   description: string;
@@ -15,7 +14,6 @@ type ProjectProps = {
 const ProjectItem: React.FC<ProjectProps> = ({
   description,
   image,
-  // images,
   name,
   techs,
   url,
@@ -27,8 +25,8 @@ const ProjectItem: React.FC<ProjectProps> = ({
           src={image}
           alt="cyber purr"
           className="image rounded-full mx-auto"
-          width="50%"
-          height="50%"
+          width={60}
+          height={60}
         />
       </div>
       <div className=" w-4/5">
