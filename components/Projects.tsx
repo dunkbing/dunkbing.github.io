@@ -29,6 +29,7 @@ const ProjectItem: React.FC<ProjectProps> = ({
           height={60}
         />
       </div>
+      <Gap.S />
       <div className=" w-4/5">
         <a href={url} target="_blank" rel="noreferrer">
           {name}
@@ -56,7 +57,7 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
       <p>
         Sometimes, I build personal projects, enhance my skill, and ... for fun!
       </p>
-      <div className="grid grid-cols-2">
+      <div className="grid md:grid-cols-2">
         {projects.map(project => (
           <ProjectItem
             key={project.name}

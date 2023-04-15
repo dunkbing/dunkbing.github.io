@@ -17,7 +17,7 @@ export const Title: React.FC<{ message: string }> = ({ message }) => {
 
 const Welcome: React.FC = () => {
   return (
-    <div className="mx-3">
+    <div className="mx-3 w-3/5">
       <Title message="Hello" />
       <p>
         I am Bui Dang Binh, a software engineering student and games programming

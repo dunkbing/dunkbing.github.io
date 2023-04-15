@@ -47,8 +47,8 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
         content="https://www.facebook.com/dunkbingg"
       />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@Bing_Dunk" />
-      <meta name="twitter:creator" content="@Bing_Dunk" />
+      <meta name="twitter:site" content="@dunkbingg" />
+      <meta name="twitter:creator" content="@dunkbingg" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />

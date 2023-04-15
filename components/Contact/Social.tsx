@@ -5,7 +5,7 @@ const Social: React.FC = () => {
   return (
     <p style={{ display: 'flex', flexDirection: 'row' }}>
       Find me on{' '}
-      <a href="https://twitter.com/Bing_Dunk" target="_blank" rel="noreferrer">
+      <a href="https://twitter.com/dunkbingg" target="_blank" rel="noreferrer">
         <FiTwitter style={{ marginLeft: 10, marginTop: 4 }} />
       </a>
       <a
