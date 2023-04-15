@@ -1,22 +1,22 @@
 {
   "name": "dunkbing-site",
-  "author": "dunkbing",
+  "version": "1.0.0",
   "repository": {
-    "url": "https://github.com/dunkbing/dunkbing.github.io.git",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/dunkbing/dunkbing.github.io.git"
   },
   "license": "MIT",
-  "version": "1.0.0",
+  "author": "dunkbing",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
     "export": "next export",
-    "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
+    "start": "next start",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "test-all": "yarn lint && yarn type-check && yarn test",
+    "type-check": "tsc --pretty --noEmit"
   },
   "husky": {
     "hooks": {
@@ -51,7 +51,8 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-raw": "^6.1.1",
     "rehype-slug": "^5.1.0",
-    "remark-code-titles": "^0.1.2"
+    "remark-code-titles": "^0.1.2",
+    "sharp": "^0.32.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
