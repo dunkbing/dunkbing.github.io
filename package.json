@@ -31,7 +31,7 @@
     ]
   },
   "resolutions": {
-    "@types/react": "17.0.2",
+    "@types/react": "18.2.6",
     "@types/react-dom": "17.0.2"
   },
   "dependencies": {
@@ -59,7 +59,7 @@
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.5.1",
     "@types/node": "^16.18.26",
-    "@types/react": "17.0.2",
+    "@types/react": "18.2.6",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "autoprefixer": "^10.4.14",
