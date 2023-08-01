@@ -58,7 +58,7 @@
     "@babel/core": "^7.21.8",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
-    "@types/node": "^16.18.34",
+    "@types/node": "^20.4.5",
     "@types/react": "18.2.6",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
