@@ -56,25 +56,25 @@ const TimeLine: React.FC = () => {
         <TimeLineItem
           experience="☀️ Full-stack Developer"
           company="FPT Software"
-          startTime="2/2023"
+          startTime="02/2023"
           endTime="current"
-        />
-        <TimeLineItem
-          experience="🎓 Bachelor's degree"
-          company="Software Engineering"
-          startTime="2022"
         />
         <TimeLineItem
           experience="☀️ Backend Developer"
           company="Vietnam AI System"
-          startTime="2/2022"
+          startTime="02/2022"
           endTime="12/2022"
+        />
+        <TimeLineItem
+          experience="🎓 Bachelor's degree"
+          company="Software Engineering"
+          startTime="2021"
         />
         <TimeLineItem
           experience="☀️ C++ Internship"
           company="Gameloft"
-          startTime="3/2021"
-          endTime="10/2021"
+          startTime="03/2021"
+          endTime="09/2021"
           lastItem={true}
         />
       </div>
