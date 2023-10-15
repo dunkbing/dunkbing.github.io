@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import Link from 'next/link';
+
 import { MetaProps } from '../types/meta-props';
 import Head from './Head';
 import Navigation from './Navigation';
@@ -41,14 +43,13 @@ const Layout = ({
       <footer className="py-8">
         <div className="max-w-4xl px-8 mx-auto">
           Built by{' '}
-          <a
+          <Link
             className="font-bold text-gray-900 dark:text-white"
             href="https://github.com/dunkbing"
             target="_blank"
-            rel="noreferrer"
           >
             dunkbing
-          </a>
+          </Link>
         </div>
       </footer>
     </>

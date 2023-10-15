@@ -1,5 +1,6 @@
-import Image from 'next/legacy/image';
 import React from 'react';
+import Image from 'next/legacy/image';
+import Link from 'next/link';
 
 import Gap from './Gap';
 
@@ -33,9 +34,9 @@ const ProjectItem: React.FC<ProjectProps> = ({
       </div>
       <Gap.S />
       <div className="w-4/5">
-        <a href={url} target="_blank" rel="noreferrer">
+        <Link href={url} target="_blank">
           {name}
-        </a>
+        </Link>
         <br />
         <span className="w-full font-mono">{description}</span>
         <div style={{ display: 'flex', flexDirection: 'row' }}>

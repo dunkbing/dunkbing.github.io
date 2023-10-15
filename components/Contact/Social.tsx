@@ -9,7 +9,6 @@ const Social: React.FC = () => {
       <Link
         href="https://twitter.com/dunkbingg"
         target="_blank"
-        rel="noreferrer"
         aria-label="Twitter"
       >
         <FiTwitter size={24} style={{ marginLeft: 10, marginTop: 4 }} />
@@ -17,7 +16,6 @@ const Social: React.FC = () => {
       <Link
         href="https://www.instagram.com/dunkbingg/"
         target="_blank"
-        rel="noreferrer"
         aria-label="Instagram"
       >
         <FiInstagram size={24} style={{ marginLeft: 10, marginTop: 4 }} />
@@ -25,7 +23,6 @@ const Social: React.FC = () => {
       <Link
         href="https://github.com/dunkbing"
         target="_blank"
-        rel="noreferrer"
         aria-label="Github"
       >
         <FiGithub size={24} style={{ marginLeft: 10, marginTop: 4 }} />
@@ -33,7 +30,6 @@ const Social: React.FC = () => {
       <Link
         href="https://www.facebook.com/dunkbinggg/"
         target="_blank"
-        rel="noreferrer"
         aria-label="Facebook"
       >
         <FiFacebook size={24} style={{ marginLeft: 10, marginTop: 4 }} />
