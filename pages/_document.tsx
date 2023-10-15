@@ -1,5 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
+import { GA_ID } from '@lib/ga';
+
 class MyDocument extends Document {
   render(): JSX.Element {
     return (
@@ -8,7 +10,7 @@ class MyDocument extends Document {
           <link id="favicon" rel="shortcut icon" href="/favicon.ico" />
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-201839371-1"
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -17,7 +19,7 @@ class MyDocument extends Document {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', 'UA-201839371-1');`,
+                gtag('config', '${GA_ID}');`,
             }}
           />
         </Head>
