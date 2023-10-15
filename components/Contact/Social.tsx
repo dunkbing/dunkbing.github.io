@@ -19,7 +19,7 @@ const Social: React.FC = () => {
         <FiGithub style={{ marginLeft: 10, marginTop: 4 }} />
       </a>
       <a
-        href="https://www.facebook.com/dunkbingg/"
+        href="https://www.facebook.com/dunkbinggg/"
         target="_blank"
         rel="noreferrer"
       >

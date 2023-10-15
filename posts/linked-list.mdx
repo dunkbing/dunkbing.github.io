@@ -10,15 +10,16 @@ A singly linked list is a dynamically distributed collection of Nodes, arranged 
 
 ![image info](/images/linkedlist/linkedlist.png)
 
-|Content|Array|Linked List|
-|---|---|---|
-|Size|- Fixed size<br/> - Need to specify size during declaration|- Size changes during element addition/removal.<br/>- Maximum size depends on memory|
-|Memory Allocation|Static: Memory allocated during compilation.|Dynamic: Memory allocated during run time.|
-|Ordering and sorting|Stored in a contiguous array of memory cells.|Stored in random memory cells.|
-|Accessing|Accessing random element directly using array index: O(1).|Accessing a random element requires traversing from the beginning/end to the element: O(n).|
-|Searching|Linear search or binary search.|Only linear search is possible.|
+| Content              | Array                                                       | Linked List                                                                                 |
+| -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Size                 | - Fixed size<br/> - Need to specify size during declaration | - Size changes during element addition/removal.<br/>- Maximum size depends on memory        |
+| Memory Allocation    | Static: Memory allocated during compilation.                | Dynamic: Memory allocated during run time.                                                  |
+| Ordering and sorting | Stored in a contiguous array of memory cells.               | Stored in random memory cells.                                                              |
+| Accessing            | Accessing random element directly using array index: O(1).  | Accessing a random element requires traversing from the beginning/end to the element: O(n). |
+| Searching            | Linear search or binary search.                             | Only linear search is possible.                                                             |
 
 Type of linked list:
+
 - Linked List.
 - Doubly Linked List.
 - Circular Linked List.
@@ -27,13 +28,16 @@ With other languages such as Java, C#, Python, there is no pointer concept, so y
 
 Implement a singly linked list. Example for C++:
 Node declaration:
+
 ```jsx:linkedlist.cpp
 struct Node {
 	  int data;
 	  Node* next;
 };
 ```
+
 Create a new Node:
+
 ```jsx:linkedlist.cpp
 Node* createNode(int x) {
     Node* temp = new Node;
@@ -42,7 +46,9 @@ Node* createNode(int x) {
     return temp;
 }
 ```
+
 Add an element to the end of the listLinker knowing the pointer is pointing to the last element:
+
 ```jsx:linkedlist.cpp
 Node* addElement(Node*p, int x) {
 	Node* temp = createNode(x); // Create a new node with x is the value.
@@ -50,7 +56,9 @@ Node* addElement(Node*p, int x) {
 	return temp; // temp now is the lst node.
 }
 ```
+
 Traversing through the elements in the linked list.
+
 ```jsx:linkedlist.cpp
 Node* p = l;
 while (p != NULL) {

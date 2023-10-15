@@ -3,5 +3,5 @@ module.exports = {
     loader: 'imgix',
     path: 'https://dunkbing.github.io/',
   },
-  output: "standalone",
+  output: 'standalone',
 };

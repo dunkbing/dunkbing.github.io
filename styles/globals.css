@@ -18,7 +18,7 @@
   }
 }
 .title::before {
-  content: "#";
+  content: '#';
   color: #cecece;
   margin: 0 5px 0 0;
 }

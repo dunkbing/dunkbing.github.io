@@ -10,7 +10,7 @@ export const Title: React.FC<{ message: string }> = ({ message }) => {
         verticalAlign: 'center',
       }}
     >
-      <h1 className="title m-0.5">{message}</h1>
+      <h2 className="title m-0.5">{message}</h2>
     </div>
   );
 };

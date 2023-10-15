@@ -11,7 +11,6 @@ import {
   Languages,
   Frontend,
   Backend,
-  Notes,
 } from '@components/index';
 import { Title } from '@components/Welcome';
 import projects from '@lib/projects';
@@ -37,8 +36,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       <Title message="My Projects" />
       <Projects projects={projects} />
       <Gap.M />
-      {/* <Title message="My Notes" />
-      <Notes posts={posts} /> */}
     </Layout>
   );
 };
