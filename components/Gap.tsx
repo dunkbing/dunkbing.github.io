@@ -2,6 +2,8 @@ import React from 'react';
 
 const Gap = (): JSX.Element => <div style={{ width: 20, height: 20 }} />;
 
+Gap.XXS = () => <div style={{ width: 5, height: 5 }} />;
+
 Gap.XS = () => <div style={{ width: 10, height: 10 }} />;
 
 Gap.S = () => <div style={{ width: 20, height: 20 }} />;

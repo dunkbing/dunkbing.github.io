@@ -42,7 +42,7 @@ const Layout = ({
         <div className="max-w-4xl px-8 mx-auto">
           Built by{' '}
           <a
-            className="text-gray-900 dark:text-white"
+            className="font-bold text-gray-900 dark:text-white"
             href="https://github.com/dunkbing"
             target="_blank"
             rel="noreferrer"
