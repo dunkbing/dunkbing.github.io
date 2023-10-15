@@ -21,7 +21,7 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
       favIcon={noteIcon}
     >
       <Title message="All Notes" />
-      <p>This site has {posts?.length} notes.</p>
+      <p>This is where I store my notes.</p>
       <div className="my-0.5">
         {posts.map(post => (
           <Note
