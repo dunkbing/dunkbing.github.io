@@ -47,7 +47,7 @@ const Layout = ({
             target="_blank"
             rel="noreferrer"
           >
-            Bui Dang Binh
+            dunkbing
           </a>
         </div>
       </footer>
