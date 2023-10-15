@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image';
 import React from 'react';
+
 import Gap from './Gap';
 
 type ProjectProps = {
@@ -27,14 +28,15 @@ const ProjectItem: React.FC<ProjectProps> = ({
           className="image rounded-full mx-auto"
           width={60}
           height={60}
+          objectFit="cover"
         />
       </div>
       <Gap.S />
-      <div className=" w-4/5">
+      <div className="w-4/5">
         <a href={url} target="_blank" rel="noreferrer">
           {name}
         </a>
-        <h4 className="w-full font-mono mb-0.5">{description}</h4>
+        <h4 className="w-full font-mono">{description}</h4>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           {techs.map(tech => (
             <span

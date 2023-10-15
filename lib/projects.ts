@@ -1,8 +1,8 @@
-import { bonkingBall, cyberPurr, defaultImg, floppyShip } from './images';
+import { cyberPurr, defaultImg, previewPic, text2AudioPic } from './images';
 
 const projects = [
   {
-    image: defaultImg,
+    image: previewPic,
     description: 'me learning react/nextjs',
     images: [defaultImg],
     techs: ['react', 'nextjs'],
@@ -10,12 +10,21 @@ const projects = [
     url: 'https://github.com/dunkbing/dunkbing.github.io',
   },
   {
-    image: defaultImg,
-    description: 'Simple webapp for watching video from sp@nkb@ng.com',
+    image: text2AudioPic,
+    description: 'Online TTS Tool',
     images: [defaultImg],
-    techs: ['react', 'nextjs', 'python'],
-    name: 'Video watching web app',
-    url: 'https://github.com/dunkbing/p0rn-video-app',
+    techs: ['preact', 'freshjs', 'deno'],
+    name: 'Text2Audio',
+    url: 'https://text2audio.cc/',
+  },
+  {
+    image: defaultImg,
+    description:
+      'A free, peer-to-peer, group video call web app, built with Deno and WebRTC',
+    images: [defaultImg],
+    techs: ['preact', 'freshjs', 'deno'],
+    name: 'M33t.fun',
+    url: 'https://m33t.deno.dev/',
   },
   {
     image: cyberPurr,
@@ -24,14 +33,6 @@ const projects = [
     techs: ['unity'],
     name: 'Cyber Purr',
     url: 'https://github.com/dunkbing/cyber-purr',
-  },
-  {
-    image: bonkingBall,
-    description: 'my first android game',
-    images: [bonkingBall],
-    techs: ['unity'],
-    name: 'Bonking Ball',
-    url: 'https://play.google.com/store/apps/details?id=com.dunkbing.JumpingBall',
   },
   {
     image: defaultImg,

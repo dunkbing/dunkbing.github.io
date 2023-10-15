@@ -13,6 +13,7 @@ import {
   NextJsIcon,
   UnityIcon,
   GolangIcon,
+  DenoIcon,
 } from '@lib/icons';
 import { useTheme } from 'next-themes';
 
@@ -21,6 +22,7 @@ const techs = {
   python: 'https://www.python.org/',
   cpp: 'https://cplusplus.com/',
   golang: 'https://go.dev/',
+  deno: 'https://deno.com/',
   csharp: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
   reactjs: 'https://reactjs.org/',
   nextjs: 'https://nextjs.org/',
@@ -69,6 +71,7 @@ export const Backend: React.FC = () => (
     <TechItem name="mysql" icon={<MySQLIcon />} />
     <TechItem name="postgresql" icon={<PostgresIcon />} />
     <TechItem name="redis" icon={<RedisIcon />} />
+    <TechItem name="deno" icon={<DenoIcon />} />
   </div>
 );
 
