@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import {
   TsIcon,
@@ -16,6 +16,7 @@ import {
   DenoIcon,
 } from '@lib/icons';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 
 const techs = {
   ts: 'https://www.typescriptlang.org/',
@@ -38,19 +39,21 @@ const TechItem: React.FC<{ icon: any; name: keyof typeof techs }> = ({
   name,
 }) => {
   const { theme } = useTheme();
-  const goTo = useCallback(() => {
-    window.open(techs[name], '_blank');
-  }, []);
 
   return (
-    <div className="w-12 h-12 mx-1 my-0.5 cursor-pointer" onClick={goTo}>
-      <a data-tip={name}>{icon}</a>
+    <Link
+      className="w-12 h-12 mx-1 my-0.5 cursor-pointer"
+      href={techs[name]}
+      target="_blank"
+      data-tip={name}
+    >
+      {icon}
       <ReactTooltip
         place="top"
         type={theme === 'dark' ? 'light' : 'dark'}
         effect="float"
       />
-    </div>
+    </Link>
   );
 };
 

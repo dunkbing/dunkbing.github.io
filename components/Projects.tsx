@@ -36,7 +36,8 @@ const ProjectItem: React.FC<ProjectProps> = ({
         <a href={url} target="_blank" rel="noreferrer">
           {name}
         </a>
-        <h4 className="w-full font-mono">{description}</h4>
+        <br />
+        <span className="w-full font-mono">{description}</span>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           {techs.map(tech => (
             <span
