@@ -46,6 +46,7 @@ const TechItem: React.FC<{ icon: any; name: keyof typeof techs }> = ({
       href={techs[name]}
       target="_blank"
       data-tip={name}
+      aria-label={name}
     >
       {icon}
       <ReactTooltip

@@ -50,6 +50,14 @@ const Layout = ({
           >
             dunkbing
           </Link>
+          {' -'}
+          <Link
+            className="font-bold text-gray-900 dark:text-white underline ml-1"
+            href="https://github.com/dunkbing/dunkbing.github.io"
+            target="_blank"
+          >
+            View source
+          </Link>
         </div>
       </footer>
     </>

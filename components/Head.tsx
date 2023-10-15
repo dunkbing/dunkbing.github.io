@@ -7,7 +7,7 @@ export let WEBSITE_HOST_URL = 'https://dunkbing.github.io';
 
 const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
   if (typeof window !== 'undefined') {
-    WEBSITE_HOST_URL = location.hostname;
+    WEBSITE_HOST_URL = location.origin;
   }
   const router = useRouter();
   const meta: MetaProps = {
