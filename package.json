@@ -33,7 +33,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^2.3.0",
     "@tailwindcss/typography": "^0.4.1",
-    "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
     "mdx-prism": "^0.3.4",
     "next": "^13.5.4",

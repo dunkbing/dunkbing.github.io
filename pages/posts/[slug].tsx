@@ -1,4 +1,3 @@
-import { format, parseISO } from 'date-fns';
 import fs from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
@@ -14,12 +13,14 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeRaw from 'rehype-raw';
 import { nodeTypes } from '@mdx-js/mdx';
+
 import Layout from '../../components/Layout';
 import { MetaProps } from '../../types/meta-props';
 import { PostType } from '../../types/post';
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils';
 import { noteIcon } from '../../lib/icons';
 import { WEBSITE_HOST_URL } from '../../components/Head';
+import { formatDate } from 'utils/format';
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -59,8 +60,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
           {frontMatter.title}
         </h1>
         <p className="mb-10 text-sm text-gray-500 dark:text-gray-400">
-          Last updated:{' '}
-          {format(parseISO(frontMatter.publishedTime), 'MMMM dd, yyyy')}
+          Last updated: {formatDate(frontMatter.publishedTime)}
         </p>
         <div className="prose dark:prose-dark" style={{ maxWidth: '80%' }}>
           <MDXRemote {...source} components={components} />
