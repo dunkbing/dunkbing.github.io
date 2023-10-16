@@ -10,7 +10,6 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "export": "next export",
     "format": "prettier --write .",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "start": "next start",
