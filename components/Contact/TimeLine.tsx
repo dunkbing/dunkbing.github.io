@@ -66,15 +66,16 @@ const TimeLine: React.FC = () => {
           endTime="12/2022"
         />
         <TimeLineItem
-          experience="🎓 Bachelor's degree"
-          company="Software Engineering"
-          startTime="2021"
-        />
-        <TimeLineItem
           experience="☀️ C++ Internship"
           company="Gameloft"
           startTime="03/2021"
           endTime="09/2021"
+        />
+        <TimeLineItem
+          experience="🎓 Bachelor's degree"
+          company="Software Engineering"
+          startTime="10/2017"
+          endTime="12/2021"
           lastItem={true}
         />
       </div>
