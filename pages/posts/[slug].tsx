@@ -12,6 +12,7 @@ import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 import { nodeTypes } from '@mdx-js/mdx';
 
 import Layout from '../../components/Layout';
@@ -63,7 +64,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
           Last updated: {formatDate(frontMatter.publishedTime)}
         </p>
         <div className="prose dark:prose-dark" style={{ maxWidth: '80%' }}>
-          <MDXRemote {...source} components={components} />
+          {source && <MDXRemote {...source} components={components} />}
         </div>
       </article>
     </Layout>
@@ -80,7 +81,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const mdxSource = await serialize(content, {
       // Optionally pass remark/rehype plugins
       mdxOptions: {
-        remarkPlugins: [require('remark-code-titles')],
+        remarkPlugins: [remarkGfm, require('remark-code-titles')],
         rehypePlugins: [
           mdxPrism,
           rehypeSlug,
