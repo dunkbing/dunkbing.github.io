@@ -6,9 +6,9 @@ export const Title: React.FC<{ message: string }> = ({ message }) => {
 
 const Welcome: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-full mb-3">
       <Title message="Hello" />
-      <p>
+      <p className="font-semibold text-lg">
         I am Bing, a full-stack developer and games programming enthusiast. I
         like to work on side projects during my spare time to solve personal
         issues and (hopefully) help others.

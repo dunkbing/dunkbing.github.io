@@ -26,7 +26,7 @@ const TimeLineItem: React.FC<TimeLineProps> = props => {
           }}
         />
       )}
-      <p>{props.experience}</p>
+      <p className="font-semibold text-md">{props.experience}</p>
       <p>{props.company}</p>
       <p className={styles['year'] + ' dark:text-gray-200 text-gray-500'}>
         {props.startTime} {props.endTime ? ` - ${props.endTime}` : ''}
