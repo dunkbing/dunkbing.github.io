@@ -19,10 +19,7 @@ const Welcome: React.FC = () => {
   return (
     <div className="mx-3 w-3/5">
       <Title message="Hello" />
-      <p>
-        I am Bui Dang Binh, a full-stack developer and games programming
-        enthusiast.
-      </p>
+      <p>I am Bing, a full-stack developer and games programming enthusiast.</p>
     </div>
   );
 };
