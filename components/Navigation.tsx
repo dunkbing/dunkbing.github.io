@@ -3,11 +3,11 @@ import React from 'react';
 
 const Navigation = (): JSX.Element => {
   return (
-    <nav className="font-bold ">
-      <Link href="/" className="text-gray-900 dark:text-white pr-6 py-4">
+    <nav className="font-bold text-xl font-mono text-gray-900 dark:text-gray-200 py-4">
+      <Link href="/" className="mr-5">
         Home
       </Link>
-      <Link href="/notes" className="text-gray-900 dark:text-white px-6 py-4">
+      <Link href="/notes" className="px-6">
         Notes
       </Link>
     </nav>
