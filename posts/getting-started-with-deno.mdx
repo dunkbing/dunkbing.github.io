@@ -1,0 +1,72 @@
+---
+title: Getting started with Deno
+description: Introduction to Deno, a runtime environment that offers enhanced security and simplicity compared to Node.js.
+publishedTime: '2023-10-25'
+modifiedTime: '2023-10-25'
+image: '/images/bridge.jpg'
+---
+
+### Deno is more secure and simpler alternative to Node.js
+
+- Deno focuses on security and restricts permissions by default
+- You can easily allow permissions for specific actions
+
+### Deno supports JavaScript and TypeScript
+
+- You can write your code in JavaScript or TypeScript
+- Deno handles TypeScript, code formatting, linting, and type checking out of the box
+
+### Deno has a built-in Key/Value store
+
+- Deno provides a JavaScript friendly database with a few lines of code
+- It uses SQLite in custom deployments and a cloud-based store in Deno Deploy
+
+### Deno is backwards compatible with npm packages
+
+- You can still use npm libraries with Deno
+- There is an --no-npm flag to avoid node_modules
+
+### Installing Deno
+
+- MacOS or Linux
+
+```bash
+curl -fsSL https://deno.land/x/install/install.sh | sh
+```
+
+- Windows
+
+```bash
+irm https://deno.land/install.ps1 | iex
+```
+
+## Getting started with Deno is simple
+
+- Open a text editor and start writing Deno apps
+- No need to install anything else
+- For example, create a hello.ts file and write:
+
+```javascript
+console.log('Hello, Deno!');
+// Run the program with `deno run hello.ts`.
+// You'll see the output "Hello, Deno!"
+```
+
+## Importing packages in Deno
+
+- Import JavaScript/TypeScript modules directly from URLs
+- Use deno.land/x for packages and deno-types for npm packages
+- Example
+
+```javascript
+// @deno-types="npm:@types/express@4.17.20"
+import express from 'npm:express@4.18.2';
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello Deno!');
+});
+
+app.listen(3000);
+```
