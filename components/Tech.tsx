@@ -59,7 +59,7 @@ const TechItem: React.FC<{ icon: any; name: keyof typeof techs }> = ({
 };
 
 export const Languages: React.FC = () => (
-  <div style={{ display: 'flex', flexDirection: 'row' }}>
+  <div className="flex flex-row gap-1 my-1">
     <TechItem name="ts" icon={<TsIcon />} />
     <TechItem name="python" icon={<PythonIcon />} />
     <TechItem name="cpp" icon={<CppIcon />} />
@@ -69,7 +69,7 @@ export const Languages: React.FC = () => (
 );
 
 export const Backend: React.FC = () => (
-  <div style={{ display: 'flex', flexDirection: 'row' }}>
+  <div className="flex flex-row gap-1 my-1">
     <TechItem name="nodejs" icon={<NodeJsIcon />} />
     <TechItem name="golang" icon={<GolangIcon />} />
     <TechItem name="mysql" icon={<MySQLIcon />} />
@@ -80,7 +80,7 @@ export const Backend: React.FC = () => (
 );
 
 export const Frontend: React.FC = () => (
-  <div style={{ display: 'flex', flexDirection: 'row' }}>
+  <div className="flex flex-row gap-1 my-1">
     <TechItem name="reactjs" icon={<ReactIcon />} />
     <TechItem name="nextjs" icon={<NextJsIcon />} />
   </div>

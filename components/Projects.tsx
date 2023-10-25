@@ -21,8 +21,8 @@ const ProjectItem: React.FC<ProjectProps> = ({
   url,
 }) => {
   return (
-    <div className="flex flex-row mb-2.5">
-      <div className="my-auto w-1/5 flex flex-row  justify-center">
+    <div className="flex flex-row gap-2.5">
+      <div className="my-auto w-1/5 flex flex-row justify-center">
         <Image
           src={image}
           alt="cyber purr"
@@ -32,14 +32,12 @@ const ProjectItem: React.FC<ProjectProps> = ({
           objectFit="cover"
         />
       </div>
-      <Gap.S />
-      <div className="w-4/5">
-        <Link href={url} target="_blank">
+      <div className="w-4/5 flex flex-col">
+        <Link href={url} target="_blank" className="text-lg">
           {name}
         </Link>
-        <br />
-        <span className="w-full font-mono">{description}</span>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <span className="w-full font-mono text-sm">{description}</span>
+        <div className="flex flex-row gap-1.5 mt-1.5">
           {techs.map(tech => (
             <span
               className="mr-0.5 border border-solid border-white px-1 rounded-md text-xs"
@@ -59,7 +57,7 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
     <>
       <Gap.XS />
       <p>I built these..!</p>
-      <div className="grid md:grid-cols-2">
+      <div className="grid md:grid-cols-2 gap-3">
         {projects.map(project => (
           <ProjectItem
             key={project.name}

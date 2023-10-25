@@ -28,8 +28,10 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       <Gap.M />
       <Title message="Languages Known" />
       <Languages />
+      <Gap.S />
       <Title message="Frontend" />
       <Frontend />
+      <Gap.S />
       <Title message="Backend, Database" />
       <Backend />
       <Gap.M />
