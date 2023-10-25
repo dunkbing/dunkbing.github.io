@@ -1,0 +1,28 @@
+---
+title: What is Edge compute
+description: Edge compute refers to the concept of performing computations and running applications at the edge of a network, closer to the users.
+publishedTime: '2023-09-15'
+modifiedTime: '2023-09-15'
+image: '/images/bridge.jpg'
+---
+
+### What is Edge compute? An Overview of Edge Compute Providers
+
+Edge compute refers to the concept of performing computations and running applications at the edge of a network, closer to the users. It offers better performance, faster load times, and more cost-effective solutions compared to traditional serverless functions like AWS Lambda or Google Functions. The future of cloud computing is likely to be centered around edge compute.
+
+#### There are two categories of edge compute providers: edge functions and edge containers.
+
+- Edge functions providers, such as Cloudflare Workers and Deno Deploy, run on V8 isolates similar to web browsers and have their own unique runtime with a limited set of web APIs. These edge functions have zero cold start time and scale up and down automatically. However, they can only handle one request at a time, similar to opening a new browser tab. Edge functions are ideal for applications that require quick response times and have no state.
+
+- On the other hand, edge containers, like those provided by Fly.io, allow more control and flexibility. These containers run actual containers, giving you the ability to choose your runtime, read/write to the file system, and even have an embedded SQLite database for improved performance. Unlike edge functions, edge containers can handle multiple requests concurrently. While they don't scale to zero by default, they can scale up and down automatically like serverless functions.
+
+It's important to note that while edge compute generally offers better performance, this also depends on the location of your database. To ensure optimal performance, you can use an "Edge database" that is distributed globally. This means your edge functions or containers will use the nearest edge database, reducing latency. Popular fully-managed edge databases include Turso and LiteFS from Fly.io, the latter being an embedded database that runs in the same container as your app, resulting in extremely low latency. However, it's essential to keep in mind that LiteFS is not fully-managed.
+
+If you're not using an edge database, it's recommended to limit your edge compute to a single region closest to your database. While this technically may not be considered "edge," it still offers the benefits of no cold start time and lower cost.
+
+In conclusion, edge compute is an emerging technology that provides improved performance and cost efficiency for running applications at the edge of the network. Whether you choose edge functions or edge containers depends on the specific requirements and scalability needs of your application.
+
+#### [](#references)References:
+
+[https://fly.io/blog/the-serverless-server/](https://fly.io/blog/the-serverless-server/)
+[https://fauna.com/blog/comparison-faas-providers](https://fauna.com/blog/comparison-faas-providers)
