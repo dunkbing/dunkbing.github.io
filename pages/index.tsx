@@ -24,16 +24,21 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
   return (
     <Layout favIcon={helloIcon}>
       <Header />
-      <Contact />
-      <Gap.M />
-      <Title message="Languages Known" />
-      <Languages />
-      <Gap.S />
-      <Title message="Frontend" />
-      <Frontend />
-      <Gap.S />
-      <Title message="Backend, Database" />
-      <Backend />
+      <div className="flex flex-col md:flex-row lg:flex-row justify-center">
+        <Contact />
+        <Gap.M />
+        <div className="flex flex-col">
+          <Title message="Languages Known" />
+          <Languages />
+          <Gap.S />
+          <Title message="Frontend" />
+          <Frontend />
+          <Gap.S />
+          <Title message="Backend, Database" />
+          <Backend />
+        </div>
+      </div>
+
       <Gap.M />
       <Title message="My Projects" />
       <Projects projects={projects} />

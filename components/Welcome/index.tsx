@@ -1,18 +1,7 @@
 import React from 'react';
 
 export const Title: React.FC<{ message: string }> = ({ message }) => {
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        verticalAlign: 'center',
-      }}
-    >
-      <h2 className="title m-0.5">{message}</h2>
-    </div>
-  );
+  return <h2 className="title">{message}</h2>;
 };
 
 const Welcome: React.FC = () => {

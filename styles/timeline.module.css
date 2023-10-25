@@ -1,5 +1,4 @@
 .timeline {
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -11,7 +10,6 @@
 
 .timeline-event p {
   position: relative;
-  top: -5px;
   margin: 0;
   text-align: left;
 }

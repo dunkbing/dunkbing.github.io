@@ -4,7 +4,7 @@ import TimeLine from './TimeLine';
 
 const Contact: React.FC = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mt-1">
       <TimeLine />
       <Social />
     </div>
