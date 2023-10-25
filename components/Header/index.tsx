@@ -5,8 +5,8 @@ import ProfilePic from './ProfilePic';
 const Header: React.FC = () => {
   return (
     <div className="flex flex-row justify-center">
-      <ProfilePic />
-      <Gap.S />
+      {/* <ProfilePic />
+      <Gap.S /> */}
       <Welcome />
     </div>
   );

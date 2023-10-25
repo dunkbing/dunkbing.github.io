@@ -58,9 +58,7 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
   return (
     <>
       <Gap.XS />
-      <p>
-        Sometimes, I build personal projects, enhance my skill, and ... for fun!
-      </p>
+      <p>I built these..!</p>
       <div className="grid md:grid-cols-2">
         {projects.map(project => (
           <ProjectItem

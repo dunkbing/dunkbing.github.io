@@ -2,20 +2,20 @@ import { cyberPurr, defaultImg, previewPic, text2AudioPic } from './images';
 
 const projects = [
   {
-    image: previewPic,
-    description: 'me learning react/nextjs',
-    images: [defaultImg],
-    techs: ['react', 'nextjs'],
-    name: 'Personal site',
-    url: 'https://github.com/dunkbing/dunkbing.github.io',
-  },
-  {
     image: text2AudioPic,
     description: 'Online TTS Tool',
     images: [defaultImg],
     techs: ['preact', 'freshjs', 'deno'],
     name: 'Text2Audio',
     url: 'https://text2audio.cc/',
+  },
+  {
+    image: previewPic,
+    description: 'me learning react/nextjs',
+    images: [defaultImg],
+    techs: ['react', 'nextjs'],
+    name: 'Personal site',
+    url: 'https://github.com/dunkbing/dunkbing.github.io',
   },
   {
     image: defaultImg,
