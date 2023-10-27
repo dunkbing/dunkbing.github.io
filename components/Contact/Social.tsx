@@ -27,13 +27,13 @@ const Social: React.FC = () => {
       >
         <FiGithub size={24} style={{ marginLeft: 10, marginTop: 4 }} />
       </Link>
-      <Link
+      {/* <Link
         href="https://www.facebook.com/dunkbinggg/"
         target="_blank"
         aria-label="Facebook"
       >
         <FiFacebook size={24} style={{ marginLeft: 10, marginTop: 4 }} />
-      </Link>
+      </Link> */}
     </div>
   );
 };
