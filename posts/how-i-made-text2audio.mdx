@@ -1,0 +1,44 @@
+---
+title: 'Creating text2audio.cc with Deno and FreshJS'
+description: I made text2audio.cc as a personal project to learn more about Deno, FreshJS, and Google text to speech API. I also wanted to create a useful tool that could help generate audio for my TikTok video.
+publishedTime: '2023-10-31'
+modifiedTime: '2023-10-31'
+---
+
+In this post, I'll walk you through the creation of my website [Text2Audio](https://text2audio.cc) using FreshJS, a full-stack Deno framework. The site leverages the Google Text-to-Speech API (actually Google Translate API) and is deployed on Deno Deploy. You can find the [source code here](https://github.com/dunkbing/text2audio).
+
+### What is Text2Audio.cc?
+
+Text2audio.cc is a straightforward platform allowing you to convert any text into audio via Google's text-to-speech service. It supports multiple languages, voices, and speeds, with the option to download the resulting audio as an mp3. Additionally, you can paste a URL, and the website automatically extracts the text from the webpage, converting it into audio.
+
+### Why did I create Text2Audio.cc?
+
+This project was a personal endeavor to delve into Deno, FreshJS, and the Google Text-to-Speech API. I also aimed to craft a practical tool for generating audio for my TikTok videos.
+
+### How was Text2Audio.cc developed?
+
+The tools and technologies used include:
+
+- **Deno**: A secure runtime for JavaScript and TypeScript with features such as built-in TypeScript support, a dependency manager, and a rich standard library.
+
+- **FreshJS**: A Deno web framework resembling Next.js, supporting TypeScript out of the box, server-side rendering, island architecture, and API routes.
+
+- **Google Text-to-Speech API**: A service within the Google Translate API, converting text into natural-sounding speech with diverse language and voice options.
+
+- **Deno Deploy**: A global deployment platform for Deno applications, offering low-latency execution on the network edge.
+
+- **Cloudflare R2**: Used for storing and serving audio files, it's an S3-compatible storage service with 10GB of free storage.
+
+The key steps in creating Text2Audio.cc were:
+
+1. Generate a FreshJS project using the `deno run -A -r https://fresh.deno.dev` command.
+2. Utilize the project's pre-configured dependencies.
+3. Set up the home page in the `index.tsx` file with Preact components for the website's UI and user interactions.
+4. Develop an API route in the `audio.ts` file for converting text to audio using the Google Text-to-Speech API.
+5. Create a utility function in the `utils` folder to fetch text from a URL.
+6. Test the website locally with `deno task start` for a development server with hot reloading.
+7. Deploy the website to Deno Deploy by pushing the project to GitHub and connecting it to Deno Deploy.
+
+And there you have it! That's the journey from conceptualization to deployment of my website, [Text2Audio](https://text2audio.cc), built on FreshJS, utilizing the Google Text-to-Speech API, and deployed on Deno Deploy.
+
+I hope you found this blog post insightful. Feel free to drop any questions or feedback in the comments or reach out to me on Twitter. Thanks for reading!

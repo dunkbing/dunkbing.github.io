@@ -50,13 +50,7 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
 
   return (
     <Layout customMeta={customMeta} favIcon={noteIcon}>
-      <article
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
+      <article className="flex flex-col items-center font-mono">
         <h1 className="mb-3 text-gray-900 dark:text-white">
           {frontMatter.title}
         </h1>
