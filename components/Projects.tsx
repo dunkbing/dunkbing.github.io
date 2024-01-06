@@ -7,7 +7,6 @@ import Gap from './Gap';
 type ProjectProps = {
   description: string;
   image: any;
-  images: any[];
   techs?: string[];
   name: string;
   url?: string;
@@ -21,22 +20,24 @@ const ProjectItem: React.FC<ProjectProps> = ({
   url,
 }) => {
   return (
-    <div className="flex flex-row gap-2.5">
-      <div className="my-auto w-1/5 flex flex-row justify-center">
+    <div className="flex flex-row font-mono gap-3">
+      <Link
+        href={url}
+        target="_blank"
+        className="my-auto w-2/5 flex flex-row justify-center"
+      >
         <Image
           src={image}
-          alt="cyber purr"
-          className="image rounded-full mx-auto"
-          width={60}
-          height={60}
-          objectFit="cover"
+          alt={name}
+          className="image rounded-md mx-auto"
+          objectFit="fill"
         />
-      </div>
-      <div className="w-4/5 flex flex-col">
+      </Link>
+      <div className="w-3/5 flex flex-col">
         <Link href={url} target="_blank" className="text-lg">
           {name}
         </Link>
-        <span className="w-full font-mono text-sm">{description}</span>
+        <span className="w-full text-sm">{description}</span>
         <div className="flex flex-row gap-1.5 mt-1.5">
           {techs.map(tech => (
             <span
@@ -57,13 +58,12 @@ const Projects: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
     <>
       <Gap.XS />
       <p>I built these..!</p>
-      <div className="grid md:grid-cols-2 gap-3">
+      <div className="grid md:grid-cols-2 gap-2">
         {projects.map(project => (
           <ProjectItem
             key={project.name}
             description={project.description}
             image={project.image}
-            images={project.images}
             techs={project.techs}
             url={project.url}
             name={project.name}

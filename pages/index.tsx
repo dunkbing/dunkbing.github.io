@@ -6,7 +6,6 @@ import {
   Layout,
   Gap,
   Projects,
-  Contact,
   Header,
   Languages,
   Frontend,
@@ -15,6 +14,7 @@ import {
 import { Title } from '@components/Welcome';
 import projects from '@lib/projects';
 import { PostType } from '../types/post';
+import TimeLine from '@components/Contact/TimeLine';
 
 type IndexProps = {
   posts: PostType[];
@@ -25,10 +25,10 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
     <Layout favIcon={helloIcon}>
       <Header />
       <div className="flex flex-col md:flex-row lg:flex-row justify-center">
-        <Contact />
+        <TimeLine />
         <Gap.M />
         <div className="flex flex-col">
-          <Title message="Languages Known" />
+          <Title message="Languages" />
           <Languages />
           <Gap.S />
           <Title message="Frontend" />

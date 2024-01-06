@@ -51,7 +51,7 @@ const TimeLineItem: React.FC<TimeLineProps> = props => {
 
 const TimeLine: React.FC = () => {
   return (
-    <div className={styles['timeline']}>
+    <div className={`${styles['timeline']} mt-1`}>
       <div className={styles['timeline-list']}>
         <TimeLineItem
           experience="☀️ Full-stack Developer"

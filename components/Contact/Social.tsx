@@ -4,8 +4,8 @@ import { FiTwitter, FiInstagram, FiGithub, FiFacebook } from 'react-icons/fi';
 
 const Social: React.FC = () => {
   return (
-    <div className="flex flex-row items-center">
-      <span>Find me on</span>
+    <div className="flex flex-row items-center justify-center">
+      Find me on
       <Link
         href="https://twitter.com/dunkbingg"
         target="_blank"

@@ -5,6 +5,7 @@ import defaultImg from '../public/images/default.jpg';
 import profilePic from '../public/images/profile.jpg';
 import previewPic from '../public/images/site-preview.png';
 import text2AudioPic from '../public/images/text2audio.png';
+import tinyImg from '../public/images/tiny-img.png';
 
 export {
   cyberPurr,
@@ -14,4 +15,5 @@ export {
   profilePic,
   previewPic,
   text2AudioPic,
+  tinyImg,
 };

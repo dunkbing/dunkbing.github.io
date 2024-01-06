@@ -7,7 +7,6 @@ import Projects from './Projects';
 import Social from './Contact/Social';
 import ThemeSwitch from './ThemeSwitch';
 import Welcome from './Welcome';
-import Contact from './Contact';
 import Header from './Header';
 import { Languages, Frontend, Backend } from './Tech';
 import Notes from './Notes';
@@ -22,7 +21,6 @@ export {
   Social,
   ThemeSwitch,
   Welcome,
-  Contact,
   Header,
   Languages,
   Frontend,
