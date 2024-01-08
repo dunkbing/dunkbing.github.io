@@ -38,7 +38,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
           <Backend />
         </div>
       </div>
-
       <Gap.M />
       <Title message="My Projects" />
       <Projects projects={projects} />

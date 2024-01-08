@@ -22,6 +22,21 @@ class MyDocument extends Document {
                 gtag('config', '${GA_ID}');`,
             }}
           />
+          <script
+            async
+            src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                kofiWidgetOverlay.draw('dunkbing', {
+                  'type': 'floating-chat',
+                  'floating-chat.donateButton.text': 'Support me',
+                  'floating-chat.donateButton.background-color': '#00b9fe',
+                  'floating-chat.donateButton.text-color': '#fff'
+                });`,
+            }}
+          />
         </Head>
         <body className="bg-white dark:bg-black text-gray-900 dark:text-white">
           <Main />
