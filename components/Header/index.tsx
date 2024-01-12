@@ -1,12 +1,9 @@
 import React from 'react';
-import { Gap, Welcome } from '..';
-import ProfilePic from './ProfilePic';
+import { Welcome } from '..';
 
 const Header: React.FC = () => {
   return (
     <div className="flex flex-row justify-center">
-      {/* <ProfilePic />
-      <Gap.S /> */}
       <Welcome />
     </div>
   );

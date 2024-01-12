@@ -1,6 +1,4 @@
 import React from 'react';
-import { GetStaticProps } from 'next';
-import { getAllPosts } from '@lib/api';
 import { helloIcon } from '@lib/icons';
 import {
   Layout,
@@ -13,14 +11,9 @@ import {
 } from '@components/index';
 import { Title } from '@components/Welcome';
 import projects from '@lib/projects';
-import { PostType } from '../types/post';
 import TimeLine from '@components/Contact/TimeLine';
 
-type IndexProps = {
-  posts: PostType[];
-};
-
-export const Index = ({ posts }: IndexProps): JSX.Element => {
+export const Index = (): JSX.Element => {
   return (
     <Layout favIcon={helloIcon}>
       <Header />
@@ -44,19 +37,6 @@ export const Index = ({ posts }: IndexProps): JSX.Element => {
       <Gap.M />
     </Layout>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts([
-    'modifiedTime',
-    'description',
-    'slug',
-    'title',
-  ]);
-
-  return {
-    props: { posts },
-  };
 };
 
 export default Index;

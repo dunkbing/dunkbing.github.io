@@ -30,7 +30,7 @@ const Layout = ({
     <>
       <Head customMeta={customMeta} />
       <header className="sticky top-0 z-50">
-        <div className="max-w-4xl px-8 mx-auto header">
+        <div className="max-w-4xl px-8 mx-auto header dark:bg-gray-900 dark:border-b-2 dark:border-yellow-600">
           <div className="flex items-center justify-between py-4">
             <Navigation />
             <ThemeSwitch />

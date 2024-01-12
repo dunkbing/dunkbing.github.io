@@ -24,13 +24,13 @@ const ProjectItem: React.FC<ProjectProps> = ({
       <Link
         href={url}
         target="_blank"
-        className="my-auto w-2/5 flex flex-row justify-center"
+        className="my-auto w-2/5 h-24 flex flex-row justify-center bg-gray-800 rounded-md shadow-md"
       >
         <Image
           src={image}
           alt={name}
           className="image rounded-md mx-auto"
-          objectFit="fill"
+          objectFit="contain"
         />
       </Link>
       <div className="w-3/5 flex flex-col">

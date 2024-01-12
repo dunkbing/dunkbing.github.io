@@ -13,8 +13,8 @@ const Welcome: React.FC = () => {
         I am Bing, a full-stack developer and tech enthusiast. I like to work on
         side projects during my spare time to solve personal issues and
         (hopefully) help others.
-        <Social />
       </p>
+      <Social />
     </div>
   );
 };

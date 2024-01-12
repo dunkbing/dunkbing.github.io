@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
-import { FiTwitter, FiInstagram, FiGithub, FiFacebook } from 'react-icons/fi';
+import { FiTwitter, FiInstagram, FiGithub } from 'react-icons/fi';
 
 const Social: React.FC = () => {
   return (
-    <div className="flex flex-row items-center justify-center">
+    <div className="font-mono flex flex-row items-center justify-center mb-1">
       Find me on
       <Link
         href="https://twitter.com/dunkbingg"
