@@ -37,13 +37,6 @@ const projects = [
     url: 'https://m33t.deno.dev/',
   },
   {
-    image: cyberPurr,
-    description: 'me learning unity',
-    techs: ['unity'],
-    name: 'Cyber Purr',
-    url: 'https://github.com/dunkbing/cyber-purr',
-  },
-  {
     image: defaultImg,
     description:
       'A simple bot for joining and recording audio in the online meeting. (Google Meet, Zoom, and Teams)',

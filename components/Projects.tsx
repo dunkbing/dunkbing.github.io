@@ -20,7 +20,7 @@ const ProjectItem: React.FC<ProjectProps> = ({
   url,
 }) => {
   return (
-    <div className="flex flex-row font-mono gap-3">
+    <div className="flex flex-row font-mono gap-3 border border-solid border-yellow-700 rounded-md transition duration-300 hover:border-yellow-600 hover:shadow-inner p-1.5">
       <Link
         href={url}
         target="_blank"
