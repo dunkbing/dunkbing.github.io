@@ -12,6 +12,7 @@ import {
 import { Title } from '@components/Welcome';
 import projects from '@lib/projects';
 import TimeLine from '@components/Contact/TimeLine';
+import { DevTools } from '@components/Tech';
 
 export const Index = (): JSX.Element => {
   return (
@@ -20,15 +21,18 @@ export const Index = (): JSX.Element => {
       <div className="flex flex-col md:flex-row lg:flex-row justify-center">
         <TimeLine />
         <Gap.M />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-0.5">
           <Title message="Languages" />
           <Languages />
-          <Gap.S />
+          <Gap.XS />
           <Title message="Frontend" />
           <Frontend />
-          <Gap.S />
-          <Title message="Backend, Database" />
+          <Gap.XS />
+          <Title message="Backend" />
           <Backend />
+          <Gap.XS />
+          <Title message="Tools" />
+          <DevTools />
         </div>
       </div>
       <Gap.M />
