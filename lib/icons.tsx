@@ -386,8 +386,8 @@ export const NeovimIcon: React.FC<IconProps> = ({ size }) => (
         id="A"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#16b0ed" stop-opacity=".8" offset="0%" />
-        <stop stop-color="#0f59b2" stop-opacity=".837" offset="100%" />
+        <stop stop-color="#16b0ed" stopOpacity=".8" offset="0%" />
+        <stop stop-color="#0f59b2" stopOpacity=".837" offset="100%" />
       </linearGradient>
       <linearGradient
         x1="152.09"
@@ -408,8 +408,8 @@ export const NeovimIcon: React.FC<IconProps> = ({ size }) => (
         id="C"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#88c649" stop-opacity=".8" offset="0%" />
-        <stop stop-color="#439240" stop-opacity=".84" offset="100%" />
+        <stop stop-color="#88c649" stopOpacity=".8" offset="0%" />
+        <stop stop-color="#439240" stopOpacity=".84" offset="100%" />
       </linearGradient>
     </defs>
     <g
@@ -429,7 +429,7 @@ export const NeovimIcon: React.FC<IconProps> = ({ size }) => (
       <path
         d="M45.234 83.032l-.062 7.063L8.89 36.532l3.36-3.422z"
         fill="#000"
-        fill-opacity=".13"
+        fillOpacity=".13"
       />
     </g>
   </svg>

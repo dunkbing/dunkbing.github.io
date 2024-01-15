@@ -20,16 +20,19 @@
 .title::before {
   margin: 0 5px 0 0;
 }
+
 /* Post styles */
-.prose pre {
+.prose-dark pre {
   @apply border border-gray-700 bg-gray-900;
+  overflow-x: scroll;
+  padding: 0.5rem;
 }
 
-.prose code {
-  @apply text-gray-200 px-1 py-0.5 border border-gray-800 rounded-md bg-gray-900;
+.prose-dark code {
+  @apply text-gray-200 px-1 py-0.5;
 }
 
-.prose img {
+.prose-dark img {
   /* Don't apply styles to next/image */
   @apply m-0;
 }
@@ -115,4 +118,18 @@ pre {
 
 .mdx-marker {
   @apply block -mx-4 px-4 bg-gray-800 border-l-4 border-blue-500;
+}
+
+ol,
+ul {
+  margin: 16px;
+  padding-left: 40px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
 }

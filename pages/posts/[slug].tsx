@@ -52,10 +52,10 @@ const PostPage = ({ source, frontMatter }: PostPageProps): JSX.Element => {
     <Layout customMeta={customMeta} favIcon={noteIcon}>
       <article className="flex flex-col items-center font-mono">
         <h1 className="mb-3 text-white">{frontMatter.title}</h1>
-        <p className="mb-10 text-sm text-gray-400">
+        <p className="mb-3 text-sm text-gray-400">
           Last updated: {formatDate(frontMatter.publishedTime)}
         </p>
-        <div className="prose-dark" style={{ maxWidth: '80%' }}>
+        <div className="prose-dark w-5/6">
           {source && <MDXRemote {...source} components={components} />}
         </div>
       </article>
