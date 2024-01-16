@@ -6,26 +6,6 @@ export type IconProps = {
   color?: string;
 };
 
-const SvgLayout: React.FC<IconProps & { children: React.ReactNode }> = ({
-  children,
-  size = 24,
-  color = 'currentColor',
-}) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 48 48"
-      x="0px"
-      y="0px"
-      width={size}
-      height={size}
-      fill={color}
-    >
-      {children}
-    </svg>
-  );
-};
-
 // src: https://icons8.com/icons/
 
 export const helloIcon =
@@ -257,7 +237,7 @@ export const DenoIcon: React.FC<IconProps> = ({ size, color = '#FFAB66' }) => {
 export const VsCodeIcon: React.FC<IconProps> = ({ size, color }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 256 256"
+    enableBackground="new 0 0 256 256"
     viewBox="0 0 256 256"
     id="vscode"
     width={size}
@@ -309,7 +289,7 @@ export const VsCodeIcon: React.FC<IconProps> = ({ size, color }) => (
 export const PostmanIcon: React.FC<IconProps> = ({ size, color }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    enable-background="new 0 0 24 24"
+    enableBackground="new 0 0 24 24"
     viewBox="0 0 24 24"
     id="postman"
     width={size}
@@ -386,8 +366,8 @@ export const NeovimIcon: React.FC<IconProps> = ({ size }) => (
         id="A"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#16b0ed" stopOpacity=".8" offset="0%" />
-        <stop stop-color="#0f59b2" stopOpacity=".837" offset="100%" />
+        <stop stopColor="#16b0ed" stopOpacity=".8" offset="0%" />
+        <stop stopColor="#0f59b2" stopOpacity=".837" offset="100%" />
       </linearGradient>
       <linearGradient
         x1="152.09"
@@ -397,8 +377,8 @@ export const NeovimIcon: React.FC<IconProps> = ({ size }) => (
         id="B"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#7db643" offset="0%" />
-        <stop stop-color="#367533" offset="100%" />
+        <stop stopColor="#7db643" offset="0%" />
+        <stop stopColor="#367533" offset="100%" />
       </linearGradient>
       <linearGradient
         x1="87.475"
@@ -408,13 +388,13 @@ export const NeovimIcon: React.FC<IconProps> = ({ size }) => (
         id="C"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#88c649" stopOpacity=".8" offset="0%" />
-        <stop stop-color="#439240" stopOpacity=".84" offset="100%" />
+        <stop stopColor="#88c649" stopOpacity=".8" offset="0%" />
+        <stop stopColor="#439240" stopOpacity=".84" offset="100%" />
       </linearGradient>
     </defs>
     <g
       transform="matrix(.301563 0 0 .301563 5.613197 .052163)"
-      fill-rule="evenodd"
+      fillRule="evenodd"
     >
       <path d="M.027 45.46L45.224-.173v212.17L.027 166.894z" fill="url(#A)" />
       <path

@@ -36,7 +36,7 @@ export const Index = (): JSX.Element => {
         </div>
       </div>
       <Gap.M />
-      <Title message="My Projects" />
+      <Title message="My Projects!!!" />
       <Projects projects={projects} />
       <Gap.M />
     </Layout>
