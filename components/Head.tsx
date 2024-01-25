@@ -11,7 +11,7 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
   }
   const router = useRouter();
   const meta: MetaProps = {
-    title: 'Bùi Đặng Bình',
+    title: 'dunkbing',
     description: 'FullStack Developer. Anime and Manga lover.',
     image: `${WEBSITE_HOST_URL}/images/site-preview.png`,
     type: 'article',
@@ -41,7 +41,7 @@ const Head = ({ customMeta }: { customMeta?: MetaProps }): JSX.Element => {
       <meta property="og:image" content={meta.image} />
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
-      <meta property="og:site_name" content="Bùi Đặng Bình - Game Developer" />
+      <meta property="og:site_name" content="dunkbing - FullStack Developer" />
       <meta
         property="article:author"
         content="https://www.facebook.com/dunkbingg"
