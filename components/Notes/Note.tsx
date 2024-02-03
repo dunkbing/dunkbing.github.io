@@ -5,7 +5,7 @@ import { formatDate } from 'utils/format';
 
 const Note: React.FC<PostType> = post => {
   return (
-    <article className="mt-5 bg-zinc-500 rounded-lg font-mono shadow-md shadow-zinc-500">
+    <article className="mt-5 bg-zinc-500 rounded-lg font-mono shadow-md hover:shadow-zinc-500">
       <div className="p-4">
         <p className="mb-1 text-sm text-gray-300">
           {formatDate(post.modifiedTime)}
