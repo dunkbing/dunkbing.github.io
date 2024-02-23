@@ -11,6 +11,7 @@ const Notes: React.FC<{ posts }> = ({ posts }) => (
         modifiedTime={post.modifiedTime}
         description={post.description}
         image={post.image}
+        type={post.type}
       />
     ))}
   </div>
