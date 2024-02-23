@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs, { readdirSync } from 'fs';
 import matter from 'gray-matter';
 import mdxPrism from 'mdx-prism';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -7,7 +7,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import path from 'path';
+import path, { join } from 'path';
 import React from 'react';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
@@ -104,7 +104,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = postFilePaths
+  const paths = readdirSync(join(POSTS_PATH, 'notes'))
     // Remove file extensions for page paths
     .map(path => path.replace(/\.mdx?$/, ''))
     // Map the path into the static paths object required by Next.js
