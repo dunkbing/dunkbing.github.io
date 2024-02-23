@@ -36,7 +36,7 @@ const ProjectItem: React.FC<ProjectProps> = ({
       <div className="w-3/5 flex flex-col">
         <span className="text-lg">{name}</span>
         <span className="w-full text-sm text-white">{description}</span>
-        <div className="flex flex-row gap-1.5 mt-1.5">
+        <div className="flex flex-row flex-wrap gap-1.5 mt-1.5">
           {techs.map(tech => (
             <span
               className="mr-0.5 border border-solid border-white text-white px-1 rounded-md text-xs"
