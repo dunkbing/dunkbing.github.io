@@ -10,6 +10,9 @@ const Navigation = (): JSX.Element => {
       <Link href="/notes" className="px-6">
         Notes
       </Link>
+      <Link href="/golang" className="px-6">
+        Golang
+      </Link>
     </nav>
   );
 };

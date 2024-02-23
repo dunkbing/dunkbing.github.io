@@ -12,8 +12,8 @@ const Note: React.FC<PostType> = post => {
         </p>
         <h1 className="mb-2 text-xl">
           <Link
-            as={`/posts/${post.slug}`}
-            href={`/posts/[slug]`}
+            as={`/${post.type}/${post.slug}`}
+            href={`/[type]/[slug]`}
             className="text-yellow-500 hover:text-yellow-400"
           >
             🖍️ {post.title}
@@ -21,7 +21,7 @@ const Note: React.FC<PostType> = post => {
         </h1>
         <p className="mb-3">{post.description}</p>
         <p className="mb-0">
-          <Link as={`/posts/${post.slug}`} href={`/posts/[slug]`}>
+          <Link as={`/posts/${post.slug}`} href={`/[type]/[slug]`}>
             Read More
           </Link>
         </p>

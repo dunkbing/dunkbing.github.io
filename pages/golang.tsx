@@ -14,12 +14,12 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
   return (
     <Layout
       customMeta={{
-        title: 'Notes',
-        description: 'My notes',
+        title: 'Golang notes',
+        description: 'My golang notes',
       }}
       favIcon={noteIcon}
     >
-      <p>This is where I store my notes.</p>
+      <p>Some notes when learning Web Development in Go</p>
       <div className="my-0.5">
         {posts.map(post => (
           <Note
@@ -29,7 +29,7 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
             modifiedTime={post.modifiedTime}
             description={post.description}
             image={post.image}
-            type="notes"
+            type="golang"
           />
         ))}
       </div>
@@ -38,7 +38,7 @@ export const Notes = ({ posts }: NotesProps): JSX.Element => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPosts('notes', [
+  const posts = await getAllPosts('golang', [
     'modifiedTime',
     'description',
     'slug',

@@ -3,8 +3,10 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import { POSTS_PATH } from '../utils/mdxUtils';
 
-export async function getPostSlugs(): Promise<string[]> {
-  return fs.readdir(POSTS_PATH);
+type PostType = 'notes' | 'golang';
+
+export async function getPostSlugs(type_: PostType): Promise<string[]> {
+  return fs.readdir(join(POSTS_PATH, type_));
 }
 
 type PostItems = {
@@ -12,11 +14,12 @@ type PostItems = {
 };
 
 export async function getPostBySlug(
+  type_: PostType,
   slug: string,
   fields: string[] = []
 ): Promise<PostItems> {
   const realSlug = slug.replace(/\.mdx$/, '');
-  const fullPath = join(POSTS_PATH, `${realSlug}.mdx`);
+  const fullPath = join(POSTS_PATH, type_, `${realSlug}.mdx`);
   const fileContents = await fs.readFile(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
@@ -38,10 +41,13 @@ export async function getPostBySlug(
   return items;
 }
 
-export async function getAllPosts(fields: string[] = []): Promise<PostItems[]> {
-  const slugs = await getPostSlugs();
+export async function getAllPosts(
+  type_: PostType,
+  fields: string[] = []
+): Promise<PostItems[]> {
+  const slugs = await getPostSlugs(type_);
   const postsBySlugs = await Promise.all(
-    slugs.map(slug => getPostBySlug(slug, fields))
+    slugs.map(slug => getPostBySlug(type_, slug, fields))
   );
   // sort posts by date in descending order
   return postsBySlugs.sort((post1, post2) =>

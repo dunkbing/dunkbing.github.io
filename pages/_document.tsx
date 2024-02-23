@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 class MyDocument extends Document {
   render(): JSX.Element {
@@ -26,6 +27,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
+        <GoogleAnalytics gaId="G-5B9VRV78DN" />
       </Html>
     );
   }

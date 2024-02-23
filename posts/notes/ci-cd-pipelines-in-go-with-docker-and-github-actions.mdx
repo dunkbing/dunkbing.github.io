@@ -115,21 +115,21 @@ Login to your GitHub account and create a new repository. For the following exam
 [](#3-assign-docker-hub-credentials-as-secrets)3\. Assign Docker Hub Credentials as Secrets
 ===========================================================================================
 
-For this step you will need to login to your Docker Hub account and generate an [access token](https://hub.docker.com/settings/security). Once you’ve done that, navigate to the **Settings** screen of the GitHub repository then click on **Secrets**.
+For this step you will need to login to your Docker Hub account and generate an [access token](https://hub.docker.com/settings/security). Once you've done that, navigate to the **Settings** screen of the GitHub repository then click on **Secrets**.
 
-[![Create Secret DOCKER_USERNAME](https://res.cloudinary.com/practicaldev/image/fetch/s--_vJID15A--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/1.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--_vJID15A--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/1.png)  
+![Create Secret DOCKER_USERNAME](/images/notes/create_secret_docker_username_ga.png)
 _Create Secret DOCKER\_USERNAME_
 
-[![Create Secret DOCKER_ACCESS_TOKEN](https://res.cloudinary.com/practicaldev/image/fetch/s--Ifeok1YM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/2.jpg)](https://res.cloudinary.com/practicaldev/image/fetch/s--Ifeok1YM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/2.jpg)  
+![Create Secret DOCKER_ACCESS_TOKEN](/images/notes/create_secret_docker_access_token_ga.png)
 _Create Secret DOCKER\_ACCESS\_TOKEN_
 
-[![Secrets for pipeline](https://res.cloudinary.com/practicaldev/image/fetch/s--yPZVLSAr--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/3.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--yPZVLSAr--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/3.png)  
+![Secrets for pipeline](/images/notes/secret_for_pipeline.png)
 _Secrets for pipeline_
 
 [](#4-create-github-workflow)4\. Create GitHub Workflow
 =======================================================
 
-We are now ready to create the GitHub workflow. Create a folder inside your repository called `.github/workflows` and add a file called **push.yml**.  
+We are now ready to create the GitHub workflow. Create a folder inside your repository called `.github/workflows` and add a file called **push.yml**.
 ```bash
 $ mkdir -p .github/workflows
 $ touch .github/workflows/push.yml
@@ -229,20 +229,20 @@ CMD ["main"]
 
 The config above uses a multi-stage build process to build the Go app then copy it to a slim Debian image. If you want to make the image smaller, you can change it to alpine or scratch.
 
-Let's test the **Dockerfile** by building it with the following command:  
+Let's test the **Dockerfile** by building it with the following command:
 ```bash
     $ docker build -t golang-pipeline:dev .
 
     Sending build context to Docker daemon  114.2kB
     Step 1/9 : FROM golang:1.16.4-buster AS builder
     1.16.4-buster: Pulling from library/golang
-    d960726af2be: Pull complete 
-    e8d62473a22d: Pull complete 
-    8962bc0fad55: Pull complete 
-    65d943ee54c1: Pull complete 
-    f2253e6fbefa: Pull complete 
-    6d7fa7c7d5d3: Pull complete 
-    e2e442f7f89f: Pull complete 
+    d960726af2be: Pull complete
+    e8d62473a22d: Pull complete
+    8962bc0fad55: Pull complete
+    65d943ee54c1: Pull complete
+    f2253e6fbefa: Pull complete
+    6d7fa7c7d5d3: Pull complete
+    e2e442f7f89f: Pull complete
     Digest: sha256:ab32429d40c1b734ed4f036838ac516352182f9414563478fa88a1553c4a4414
     Status: Downloaded newer image for golang:1.16.4-buster
      ---> 96129f3766cf
@@ -262,7 +262,7 @@ Let's test the **Dockerfile** by building it with the following command:
      ---> 3d5364678624
     Step 6/9 : FROM debian:buster-slim
     buster-slim: Pulling from library/debian
-    69692152171a: Pull complete 
+    69692152171a: Pull complete
     Digest: sha256:f077cd32bfea6c4fa8ddeea05c53b27e90c7fad097e2011c9f5f11a8668f8db4
     Status: Downloaded newer image for debian:buster-slim
      ---> 80b9e7aadac5
@@ -280,15 +280,15 @@ Let's test the **Dockerfile** by building it with the following command:
     Successfully tagged golang-pipeline:dev
 ```
 
-Now run the image and see if it prints the incorrect string **Hello Golang**:  
+Now run the image and see if it prints the incorrect string **Hello Golang**:
 ```bash
     $ docker run --rm golang-pipeline:dev
-    
+
     Version: dev
     Hello golang
 ```
 
-We can assign a version to the image by using `--build-arg VERSION=1.0.0` while building the image. For example:  
+We can assign a version to the image by using `--build-arg VERSION=1.0.0` while building the image. For example:
 ```bash
     $ docker build -t golang-pipeline:1.0.0 . --build-arg VERSION=1.0.0
 
@@ -324,10 +324,10 @@ We can assign a version to the image by using `--build-arg VERSION=1.0.0` while 
     Successfully tagged golang-pipeline:1.0.0
 ```
 
-The docker image built can be found here:  
+The docker image built can be found here:
 ```bash
     $ docker images
-    
+
     REPOSITORY                TAG             IMAGE ID       CREATED          SIZE
     golang-pipeline           1.0.0           9da417e7399b   22 seconds ago   71.2MB
     golang-pipeline           dev             190ba9407211   3 minutes ago    71.2MB
@@ -360,22 +360,22 @@ Now that we know our project builds and we have created a repository, we are rea
 
 Go to your GitHub repository and click **Actions**. We should see the GitHub action running. Since we are pushing to the main branch, it will run the **test** job and it should fail.
 
-[![Github Action test fail](https://res.cloudinary.com/practicaldev/image/fetch/s--ASc4rp9M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/5.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--ASc4rp9M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/5.png)  
+![Github Action test fail_](/images/notes/ga_build_fail.png)
 _Github Action test fail_
 
 [](#8-fix-code-so-test-passes)8\. Fix Code so Test Passes
 =========================================================
 
-Let's fix the broken test.  
-Open **main.go** and modify the return value of the `hello` function so that it returns `Hello Golang`.  
+Let's fix the broken test.
+Open **main.go** and modify the return value of the `hello` function so that it returns `Hello Golang`.
 ```bash
     $ go test
-    
+
     PASS
     ok      hello   0.003s
 
 
-Commit and push the changes.  
+Commit and push the changes.
 
     $ git add .
     $ git commit - "Fix hello function return value"
@@ -384,10 +384,10 @@ Commit and push the changes.
 
 The GitHub action should run again and now the test will pass.
 
-[![Github Action test successfully](https://res.cloudinary.com/practicaldev/image/fetch/s--ItJu5dxw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/6.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--ItJu5dxw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/6.png)  
+![Github Action test fail_](/images/notes/ga_test_successfully.png)
 _Github Action test successfully_
 
-[![Github Action status_](https://res.cloudinary.com/practicaldev/image/fetch/s--_7BQHlIe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/7.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--_7BQHlIe--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/Ja7ad/blog/master/images/golang-CICD/7.png)  
+![Github Action test fail_](/images/notes/ga_status.png)
 _Github Action status_
 
 [](#9-push-tag)9\. Push Tag

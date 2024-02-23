@@ -1,0 +1,60 @@
+---
+title: Your First Webpage with Go
+description: Learn how to create a simple HTTP server in Go that responds with "Hello, World!"
+publishedTime: '2024-02-23'
+modifiedTime: '2024-02-23'
+image: '/images/gopher-github-actions.jpeg'
+---
+
+<br />
+
+Creating a Basic HTTP Server in Go
+===================================
+
+Let's create a simple HTTP server that responds with "Hello, World!" when accessed. This will serve as your first step into the world of Go programming.
+
+Understanding the `net/http` Package
+-------------------------------------
+
+The `net/http` package in Go is a powerful tool for creating HTTP servers and clients. It provides a simple and efficient way to handle HTTP requests and responses.
+
+Let's create a new file named `main.go` and open it in your preferred code editor.
+
+Here's the code you need to write in `main.go`:
+
+```go
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+func main() {
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprint(w, "Hello, World!")
+    })
+
+    http.ListenAndServe(":8080", nil)
+}
+```
+
+In this code, we're defining a function that handles HTTP requests. When a request comes in, it writes "Hello, World!" to the response writer.
+
+Running Your Server
+-------------------
+
+Open your terminal, navigate to the directory containing your `main.go` file, and run the following command:
+
+```bash
+go run main.go
+```
+
+This command compiles and runs your Go program.
+
+Testing Your Server
+-------------------
+
+Open your web browser and navigate to `http://localhost:8080`. You should see "Hello, World!" displayed on the webpage.
+
+Congratulations! You've just created your first webpage using Go. This is a basic example, but it's a great start for understanding how Go handles HTTP requests and responses.
