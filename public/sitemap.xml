@@ -3,42 +3,67 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://db99.dev/</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://db99.dev/notes</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://db99.dev/posts/how-to-get-a-free-domain</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <loc>https://db99.dev/golang</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://db99.dev/notes/taking-notes-with-md-and-git</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://db99.dev/posts/how-i-made-text2audio</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <loc>https://db99.dev/notes/ci-cd-pipelines-in-go-with-docker-and-github-actions</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://db99.dev/posts/getting-started-with-deno</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <loc>https://db99.dev/notes/how-to-get-a-free-domain</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://db99.dev/posts/what-is-edge-computing</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <loc>https://db99.dev/notes/how-i-made-text2audio</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://db99.dev/posts/sdl-devcpp</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <loc>https://db99.dev/notes/getting-started-with-deno</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
-    <loc>https://db99.dev/posts/linked-list</loc>
-    <lastmod>2024-01-16T14:21:06+00:00</lastmod>
+    <loc>https://db99.dev/notes/what-is-edge-computing</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://db99.dev/notes/sdl-devcpp</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://db99.dev/notes/linked-list</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://db99.dev/golang/basic-example</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://db99.dev/golang/net-http</loc>
+    <lastmod>2024-02-23T12:32:13+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 </urlset>
