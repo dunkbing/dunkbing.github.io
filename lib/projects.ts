@@ -8,6 +8,14 @@ import {
 
 const projects = [
   {
+    image: defaultImg,
+    description:
+      'Visualize your keystrokes in real-time. Perfect for tutorials and presentations.',
+    techs: ['rust', 'tauri'],
+    name: 'TypeView',
+    url: 'https://typeview.db99.dev/',
+  },
+  {
     image: text2AudioPic,
     description: 'Online TTS Tool',
     techs: ['preact', 'freshjs', 'deno'],
